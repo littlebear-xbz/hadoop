@@ -12,7 +12,7 @@ from thrift.protocol import TBinaryProtocol
 from hbase import Hbase
 
 
-transport = TTransport.TBufferedTransport(TSocket.TSocket('jp-hadoop-03', 9090))
+transport = TTransport.TBufferedTransport(TSocket.TSocket('jp-bigdata-03', 9090))
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
 client = Hbase.Client(protocol)
 
