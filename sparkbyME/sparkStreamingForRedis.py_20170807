@@ -1,0 +1,106 @@
+# -*- coding: utf-8 -*-
+# ----------------------------------------------------------------
+# 功能：实时统计ip地址数量
+# 实现：flume 获取 日志记录，并将数据推送至kafka中
+#       spark streaming 按RDD处理数据
+#       处理后数据写入redis中进行统计
+#       从redis中将数据写入到mysql
+# 编写人： chenyangang
+# 日期： 2017-08-02
+# ----------------------------------------------------------------
+from pyspark import SparkContext
+from pyspark.streaming import StreamingContext
+from pyspark.streaming.kafka import KafkaUtils
+import redis
+import datetime
+
+
+class RedisClient:
+    pool = None
+
+    def __init__(self):
+        self.getRedisPool()
+
+    def getRedisPool(self):
+        redisip = 'jp-mysql-01'
+        redisPort = 6379
+        redisDB = 0
+        self.pool = redis.ConnectionPool(host=redisip, port=redisPort, db=redisDB)
+        return self.pool
+
+    def addToHashSet(self, key, value):
+        if self.pool is None:
+            self.pool = self.getRedisPool()
+        r = redis.Redis(connection_pool=self.pool)
+        hashSetName = "my80-log-iphash-" + datetime.datetime.now().strftime("%Y-%m-%d")
+
+        flag = False;
+        if r.exists(hashSetName) is False:
+            flag = True
+
+        if r.hexists(hashSetName, str(key)):
+            r.hincrby(hashSetName, str(key), value)
+        else:
+            r.hset(hashSetName, str(key), value)
+
+        if flag is True:
+            r.expire(hashSetName, 3600 * 24 + 300);
+
+    def addToList(self, value):
+        if self.pool is None:
+            self.pool = self.getRedisPool()
+        r = redis.Redis(connection_pool=self.pool)
+        r.lpush('my80-log-list', value)
+
+
+def initSparkStreaming():
+    sc = SparkContext("local[7]", "KafkaWordCount")
+    ssc = StreamingContext(sc, 2)
+    #ssc.checkpoint('hdfs://jp-hadoop-02/data/checkpoint')
+
+    # set zookeeper
+    zookeeper = "jp-hadoop-00:2181, jp-hadoop-02:2181, jp-hadoop-06:2181"
+
+    # set kafka's topic
+    topic = "test_flume_kafka"
+
+    initDstream = KafkaUtils.createStream(ssc=ssc, zkQuorum=zookeeper, groupId="kafka-streaming-redis",
+                                          topics={topic: 1})
+    return ssc, initDstream
+
+
+def processRDD(rdd):
+    return rdd.map(lambda x: x[1]).map(lambda line: line.split(" ")) \
+        .map(lambda x: x[0]).map(lambda ipaddr: (ipaddr, 1)) \
+        .reduceByKey(lambda a, b: a + b)
+
+
+def main():
+    # 连接spark streaming流
+    ssc, initDstream = initSparkStreaming()
+
+    # 处理RDD
+    proceedDStream = processRDD(initDstream)
+
+    # 数据写入redis中并进行计算
+    r = RedisClient()
+
+    #统计ip地址次数
+    def ipHandle(time,  rdd):
+        if rdd.isEmpty() is False:
+            # rddstr = "{"+','.join(rdd.collect())+"}"
+            for element in rdd.collect():
+                r.addToHashSet(element[0], element[1])
+
+    proceedDStream.foreachRDD(ipHandle)
+
+    # 结果回写到mysql
+
+    # 处理结束，关闭streaming
+    ssc.start()
+    ssc.awaitTermination()
+
+
+if __name__ == '__main__':
+    main()
+

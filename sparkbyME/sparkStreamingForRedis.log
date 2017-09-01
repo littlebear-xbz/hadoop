@@ -1,0 +1,2315 @@
+nohup: 忽略输入
+17/08/30 15:37:37 INFO spark.SparkContext: Running Spark version 2.2.0.cloudera1
+17/08/30 15:37:37 INFO spark.SparkContext: Submitted application: KafkaWordCount
+17/08/30 15:37:37 INFO spark.SecurityManager: Changing view acls to: hdfs
+17/08/30 15:37:37 INFO spark.SecurityManager: Changing modify acls to: hdfs
+17/08/30 15:37:37 INFO spark.SecurityManager: Changing view acls groups to: 
+17/08/30 15:37:37 INFO spark.SecurityManager: Changing modify acls groups to: 
+17/08/30 15:37:37 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hdfs); groups with view permissions: Set(); users  with modify permissions: Set(hdfs); groups with modify permissions: Set()
+17/08/30 15:37:37 INFO util.Utils: Successfully started service 'sparkDriver' on port 40091.
+17/08/30 15:37:37 INFO spark.SparkEnv: Registering MapOutputTracker
+17/08/30 15:37:37 INFO spark.SparkEnv: Registering BlockManagerMaster
+17/08/30 15:37:37 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+17/08/30 15:37:37 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+17/08/30 15:37:37 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-8f444bd9-dde8-4e1c-acb8-e5f97745169e
+17/08/30 15:37:38 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+17/08/30 15:37:38 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+17/08/30 15:37:38 INFO util.log: Logging initialized @2476ms
+17/08/30 15:37:38 INFO server.Server: jetty-9.3.z-SNAPSHOT
+17/08/30 15:37:38 INFO server.Server: Started @2558ms
+17/08/30 15:37:38 INFO server.AbstractConnector: Started ServerConnector@55245576{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+17/08/30 15:37:38 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@565b9cfe{/jobs,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3dea4596{/jobs/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@29be3e35{/jobs/job,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@f16bc4d{/jobs/job/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@26b3ad99{/stages,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4b0b9759{/stages/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2c121332{/stages/stage,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@79d81d54{/stages/stage/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@59dea1bd{/stages/pool,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5dedf1f6{/stages/pool/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6bfb91f6{/storage,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@e8ea0cc{/storage/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5e31f185{/storage/rdd,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6d735d7b{/storage/rdd/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@40da568a{/environment,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@219e5b39{/environment/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@13f3a667{/executors,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1caa7cd9{/executors/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6de24a84{/executors/threadDump,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@186916bd{/executors/threadDump/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@644ffe6e{/static,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@35335487{/,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@707f19b9{/api,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2e3fedf2{/jobs/job/kill,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@758bc612{/stages/stage/kill,null,AVAILABLE,@Spark}
+17/08/30 15:37:38 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.246:4040
+17/08/30 15:37:38 INFO executor.Executor: Starting executor ID driver on host localhost
+17/08/30 15:37:38 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59401.
+17/08/30 15:37:38 INFO netty.NettyBlockTransferService: Server created on 192.168.1.246:59401
+17/08/30 15:37:38 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+17/08/30 15:37:38 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.246, 59401, None)
+17/08/30 15:37:38 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.1.246:59401 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.246, 59401, None)
+17/08/30 15:37:38 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.246, 59401, None)
+17/08/30 15:37:38 INFO storage.BlockManager: external shuffle service port = 7337
+17/08/30 15:37:38 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.246, 59401, None)
+17/08/30 15:37:38 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@199f2eb{/metrics/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:39 INFO scheduler.EventLoggingListener: Logging events to hdfs://jp-bigdata-03:8020/user/spark/spark2ApplicationHistory/local-1504078658384
+-------------------Sucessful--------------------------
+17/08/30 15:37:40 INFO scheduler.ReceiverTracker: Starting 1 receivers
+17/08/30 15:37:40 INFO scheduler.ReceiverTracker: ReceiverTracker started
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Slide time = 2000 ms
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Storage level = Serialized 1x Replicated
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Checkpoint interval = null
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Remember interval = 2000 ms
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka.KafkaInputDStream@483a79b4
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Slide time = 2000 ms
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Storage level = Serialized 1x Replicated
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Checkpoint interval = null
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Remember interval = 2000 ms
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Initialized and validated org.apache.spark.streaming.api.python.PythonTransformedDStream@557c8a17
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Slide time = 2000 ms
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Storage level = Serialized 1x Replicated
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Checkpoint interval = null
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Remember interval = 2000 ms
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@12941bba
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Slide time = 2000 ms
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Storage level = Serialized 1x Replicated
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Checkpoint interval = null
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Remember interval = 2000 ms
+17/08/30 15:37:40 INFO kafka.KafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka.KafkaInputDStream@483a79b4
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Slide time = 2000 ms
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Storage level = Serialized 1x Replicated
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Checkpoint interval = null
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Remember interval = 2000 ms
+17/08/30 15:37:40 INFO python.PythonTransformedDStream: Initialized and validated org.apache.spark.streaming.api.python.PythonTransformedDStream@5d5282fc
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Slide time = 2000 ms
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Storage level = Serialized 1x Replicated
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Checkpoint interval = null
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Remember interval = 2000 ms
+17/08/30 15:37:40 INFO dstream.ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@463ea73b
+17/08/30 15:37:40 INFO util.RecurringTimer: Started timer for JobGenerator at time 1504078662000
+17/08/30 15:37:40 INFO scheduler.JobGenerator: Started JobGenerator at 1504078662000 ms
+17/08/30 15:37:40 INFO scheduler.JobScheduler: Started JobScheduler
+17/08/30 15:37:40 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4b5fa786{/streaming,null,AVAILABLE,@Spark}
+17/08/30 15:37:40 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@15cfaf0a{/streaming/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:40 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6cc39599{/streaming/batch,null,AVAILABLE,@Spark}
+17/08/30 15:37:40 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d96fd93{/streaming/batch/json,null,AVAILABLE,@Spark}
+17/08/30 15:37:40 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@20145675{/static/streaming,null,AVAILABLE,@Spark}
+17/08/30 15:37:40 INFO streaming.StreamingContext: StreamingContext started
+17/08/30 15:37:40 INFO scheduler.ReceiverTracker: Receiver 0 started
+17/08/30 15:37:40 INFO scheduler.DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+17/08/30 15:37:40 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (start at NativeMethodAccessorImpl.java:0)
+17/08/30 15:37:40 INFO scheduler.DAGScheduler: Parents of final stage: List()
+17/08/30 15:37:40 INFO scheduler.DAGScheduler: Missing parents: List()
+17/08/30 15:37:40 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:620), which has no missing parents
+17/08/30 15:37:40 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 74.4 KB, free 366.2 MB)
+17/08/30 15:37:40 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 27.2 KB, free 366.2 MB)
+17/08/30 15:37:40 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.246:59401 (size: 27.2 KB, free: 366.3 MB)
+17/08/30 15:37:40 INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:40 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:620) (first 15 tasks are for partitions Vector(0))
+17/08/30 15:37:40 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+17/08/30 15:37:41 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 5135 bytes)
+17/08/30 15:37:41 INFO executor.Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/08/30 15:37:41 INFO util.RecurringTimer: Started timer for BlockGenerator at time 1504078661200
+17/08/30 15:37:41 INFO receiver.BlockGenerator: Started BlockGenerator
+17/08/30 15:37:41 INFO scheduler.ReceiverTracker: Registered receiver for stream 0 from 192.168.1.246:40091
+17/08/30 15:37:41 INFO receiver.ReceiverSupervisorImpl: Starting receiver 0
+17/08/30 15:37:41 INFO kafka.KafkaReceiver: Starting Kafka Consumer Stream with group: kafka-streaming-redis
+17/08/30 15:37:41 INFO kafka.KafkaReceiver: Connecting to Zookeeper: jp-bigdata-02:2181, jp-bigdata-03:2181, jp-bigdata-06:2181
+17/08/30 15:37:41 INFO receiver.BlockGenerator: Started block pushing thread
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Verifying properties
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Property group.id is overridden to kafka-streaming-redis
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Property zookeeper.connect is overridden to jp-bigdata-02:2181, jp-bigdata-03:2181, jp-bigdata-06:2181
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Property zookeeper.connection.timeout.ms is overridden to 10000
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], Connecting to zookeeper instance at jp-bigdata-02:2181, jp-bigdata-03:2181, jp-bigdata-06:2181
+17/08/30 15:37:41 INFO zkclient.ZkEventThread: Starting ZkClient event thread.
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.5-cdh5.12.0--1, built on 06/29/2017 11:29 GMT
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:host.name=jp-bigdata-06
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:java.version=1.8.0_121
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:java.home=/usr/java/jdk1.8.0_121/jre
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:java.class.path=/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/conf/:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/joda-time-2.9.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jersey-server-2.22.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jline-2.12.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-common-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/aopalliance-repackaged-2.4.0-b34.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-jackson-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/calcite-avatica-1.2.0-incubating.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-graphx_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-column-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-sketch_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-pool-1.5.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-network-common_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/metrics-core-3.1.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/antlr-runtime-3.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jackson-core-2.6.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/apache-log4j-extras-1.2.17.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/scala-xml_2.11-1.0.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/stringtemplate-3.2.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/eigenbase-properties-1.1.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/validation-api-1.1.0.Final.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/univocity-parsers-2.2.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-codec-1.10.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/datanucleus-api-jdo-3.2.6.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/flume-ng-sdk-1.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/macro-compat_2.11-1.1.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-yarn_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/compress-lzf-1.0.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-lang-2.6.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/snappy-0.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/stax-api-1.0.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/machinist_2.11-0.6.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jcl-over-slf4j-1.7.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jetty-6.1.26.cloudera.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/metrics-json-3.1.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/datanucleus-rdbms-3.2.9.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/JavaEWAH-0.3.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/opencsv-2.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/datanucleus-core-3.2.10.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/gson-2.2.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/xz-1.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/logredactor-1.0.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/scala-compiler-2.11.8.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jetty-util-6.1.26.cloudera.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jackson-databind-2.6.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/libfb303-0.9.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/javax.servlet-api-3.1.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/scala-reflect-2.11.8.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/calcite-core-1.2.0-incubating.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hive-shims-scheduler-1.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-crypto-1.0.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/pyrolite-4.13.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-launcher_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-unsafe_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-dbcp-1.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jersey-container-servlet-2.22.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/ivy-2.4.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-mllib_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/chill_2.11-0.8.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-streaming-flume-sink_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-streaming_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/mockito-all-1.8.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hive-shims-common-1.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-streaming-flume_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hive-serde-1.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-lang3-3.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/javax.ws.rs-api-2.0.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jodd-core-3.5.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/flume-ng-core-1.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jackson-module-paranamer-2.6.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/avro-ipc-1.7.6-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-sql_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/netty-all-4.0.43.Final.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/minlog-1.3.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hk2-api-2.4.0-b34.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/metrics-jvm-3.1.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/kryo-shaded-3.0.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/lz4-1.3.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/derby-10.11.1.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-repl_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jta-1.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jdo-api-3.0.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-tags_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jersey-media-jaxb-2.22.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spire_2.11-0.13.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/osgi-resource-locator-1.0.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/calcite-linq4j-1.2.0-incubating.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/javax.inject-2.4.0-b34.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-net-2.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jackson-module-scala_2.11-2.6.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/chill-java-0.8.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/arpack_combined_all-0.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/antlr-2.7.7.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/core-1.1.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hk2-locator-2.4.0-b34.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-hadoop-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-collections-3.2.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jul-to-slf4j-1.7.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/paranamer-2.6.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/javolution-5.5.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-io-2.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/ST4-4.0.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-catalyst_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-format-2.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/javax.annotation-api-1.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-math3-3.4.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jackson-jaxrs-1.8.8.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/stream-2.7.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/libthrift-0.9.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/json4s-core_2.11-3.2.11.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jtransforms-2.4.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-hadoop-bundle-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/breeze-macros_2.11-0.13.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/httpcore-4.4.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jersey-common-2.22.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/xbean-asm5-shaded-4.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-compress-1.4.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/scala-library-2.11.8.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-httpclient-3.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/janino-3.0.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hive-shims-0.23-1.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/metrics-graphite-3.1.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-compiler-3.0.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/mina-core-2.0.0-M5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-cli-1.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jersey-client-2.22.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/pmml-model-1.2.15.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jackson-xc-1.8.8.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/json-20090211.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/netty-3.9.9.Final.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/fastutil-6.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/objenesis-2.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/scala-parser-combinators_2.11-1.0.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-network-shuffle_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-hive-exec_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/flume-ng-configuration-1.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/shapeless_2.11-2.3.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/scalap-2.11.8.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-avro-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/pmml-schema-1.2.15.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/commons-logging-1.1.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jersey-guava-2.22.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/avro-mapred-1.7.6-cdh5.12.0-hadoop2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/breeze_2.11-0.13.1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hive-metastore-1.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/RoaringBitmap-0.5.11.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jackson-annotations-2.6.5.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hive-shims-1.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/hk2-utils-2.4.0-b34.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/json4s-ast_2.11-3.2.11.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/antlr4-runtime-4.5.3.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-mllib-local_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/json4s-jackson_2.11-3.2.11.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/oro-2.0.8.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spire-macros_2.11-0.13.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/javassist-3.18.1-GA.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/parquet-encoding-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/py4j-0.10.4.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-core_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/avro-1.7.6-cdh5.12.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/spark-hive_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/bonecp-0.7.1.RELEASE.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/jersey-container-servlet-core-2.22.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/jars/mysql-connector-java-5.1.42-bin.jar:/run/cloudera-scm-agent/process/242-hue-HUE_SERVER/yarn-conf/:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/kafka-0.9/metrics-core-2.2.0.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/kafka-0.9/kafka_2.11-0.9.0-kafka-2.0.2.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/kafka-0.9/zkclient-0.7.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/kafka-0.9/spark-streaming-kafka-0-8_2.11-2.2.0.cloudera1.jar:/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/kafka-0.9/kafka-clients-0.9.0-kafka-2.0.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/activation-1.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/aopalliance-1.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/apacheds-i18n-2.0.0-M15.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/apacheds-kerberos-codec-2.0.0-M15.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/api-asn1-api-1.0.0-M20.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/api-util-1.0.0-M20.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/asm-3.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/avro-1.7.6-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/aws-java-sdk-bundle-1.11.134.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/azure-data-lake-store-sdk-2.1.4.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-beanutils-1.9.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-beanutils-core-1.8.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-cli-1.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-codec-1.4.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-collections-3.2.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-compress-1.4.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-configuration-1.6.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-daemon-1.0.13.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-digester-1.8.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-el-1.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-httpclient-3.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-io-2.4.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-lang-2.6.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-logging-1.1.3.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-math3-3.1.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/commons-net-3.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/curator-client-2.7.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/curator-framework-2.7.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/curator-recipes-2.7.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/gson-2.2.4.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/guava-11.0.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/guice-3.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/guice-servlet-3.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-annotations-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-ant-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-archive-logs-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-archives-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-auth-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-aws-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-azure-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-azure-datalake-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-common-2.6.0-cdh5.12.0-tests.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-common-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-datajoin-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-distcp-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-extras-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-gridmix-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-hdfs-2.6.0-cdh5.12.0-tests.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-hdfs-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-hdfs-nfs-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-app-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-common-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-core-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-hs-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-hs-plugins-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-jobclient-2.6.0-cdh5.12.0-tests.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-jobclient-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-nativetask-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-client-shuffle-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-mapreduce-examples-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-nfs-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-openstack-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-rumen-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-sls-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-streaming-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-api-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-applications-distributedshell-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-applications-unmanaged-am-launcher-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-client-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-common-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-registry-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-server-applicationhistoryservice-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-server-common-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-server-nodemanager-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-server-resourcemanager-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-server-tests-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hadoop-yarn-server-web-proxy-2.6.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hamcrest-core-1.3.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/htrace-core4-4.0.1-incubating.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/httpclient-4.2.5.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/httpcore-4.2.5.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/hue-plugins-3.9.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jackson-annotations-2.2.3.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jackson-core-2.2.3.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jackson-core-asl-1.8.8.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jackson-databind-2.2.3.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jackson-jaxrs-1.8.8.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jackson-mapper-asl-1.8.8.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jackson-xc-1.8.8.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jasper-compiler-5.5.23.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jasper-runtime-5.5.23.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/java-xmlbuilder-0.4.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/javax.inject-1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jaxb-api-2.2.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jaxb-impl-2.2.3-1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jersey-client-1.9.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jersey-core-1.9.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jersey-guice-1.9.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jersey-json-1.9.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jersey-server-1.9.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jets3t-0.9.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jettison-1.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jetty-6.1.26.cloudera.4.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jetty-util-6.1.26.cloudera.4.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jline-2.11.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jsch-0.1.42.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jsp-api-2.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/jsr305-3.0.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/junit-4.11.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/leveldbjni-all-1.8.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/log4j-1.2.17.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/logredactor-1.0.3.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/metrics-core-3.0.2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/microsoft-windowsazure-storage-sdk-0.6.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/mockito-all-1.8.5.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/netty-3.10.5.Final.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/okhttp-2.4.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/okio-1.4.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/paranamer-2.3.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-avro-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-cascading-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-column-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-common-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-encoding-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-format-2.1.0-cdh5.12.0-javadoc.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-format-2.1.0-cdh5.12.0-sources.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-format-2.1.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-generator-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-hadoop-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-hadoop-bundle-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-jackson-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-pig-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-pig-bundle-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-protobuf-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-scala_2.10-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-scrooge_2.10-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-test-hadoop2-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-thrift-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/parquet-tools-1.5.0-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/protobuf-java-2.5.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/servlet-api-2.5.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/slf4j-api-1.7.5.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/slf4j-log4j12-1.7.5.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/snappy-java-1.0.4.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/spark-1.6.0-cdh5.12.0-yarn-shuffle.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/stax-api-1.0-2.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/xercesImpl-2.9.1.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/xml-apis-1.3.04.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/xmlenc-0.52.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/xz-1.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/jars/zookeeper-3.4.5-cdh5.12.0.jar:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/lib/hadoop/LICENSE.txt:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/lib/hadoop/NOTICE.txt
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:java.library.path=:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/lib/hadoop/lib/native:/opt/cloudera/parcels/CDH-5.12.0-1.cdh5.12.0.p0.29/lib/hadoop/lib/native:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:os.name=Linux
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:os.arch=amd64
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:os.version=3.10.0-327.el7.x86_64
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:user.name=hdfs
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:user.home=/var/lib/hadoop-hdfs
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Client environment:user.dir=/var/lib/hadoop-hdfs
+17/08/30 15:37:41 INFO zookeeper.ZooKeeper: Initiating client connection, connectString=jp-bigdata-02:2181, jp-bigdata-03:2181, jp-bigdata-06:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@7812d47
+17/08/30 15:37:41 ERROR client.StaticHostProvider: Unable to connect to server:  jp-bigdata-03:2181
+java.net.UnknownHostException:  jp-bigdata-03: 域名解析暂时失败
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.zookeeper.client.StaticHostProvider.<init>(StaticHostProvider.java:60)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:445)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:380)
+	at org.I0Itec.zkclient.ZkConnection.connect(ZkConnection.java:69)
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:1218)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:155)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:129)
+	at kafka.utils.ZkUtils$.createZkClientAndConnection(ZkUtils.scala:80)
+	at kafka.utils.ZkUtils$.apply(ZkUtils.scala:62)
+	at kafka.consumer.ZookeeperConsumerConnector.connectZk(ZookeeperConsumerConnector.scala:191)
+	at kafka.consumer.ZookeeperConsumerConnector.<init>(ZookeeperConsumerConnector.scala:139)
+	at kafka.consumer.ZookeeperConsumerConnector.<init>(ZookeeperConsumerConnector.scala:156)
+	at kafka.consumer.Consumer$.create(ConsumerConnector.scala:109)
+	at org.apache.spark.streaming.kafka.KafkaReceiver.onStart(KafkaInputDStream.scala:100)
+	at org.apache.spark.streaming.receiver.ReceiverSupervisor.startReceiver(ReceiverSupervisor.scala:149)
+	at org.apache.spark.streaming.receiver.ReceiverSupervisor.start(ReceiverSupervisor.scala:131)
+	at org.apache.spark.streaming.scheduler.ReceiverTracker$ReceiverTrackerEndpoint$$anonfun$9.apply(ReceiverTracker.scala:607)
+	at org.apache.spark.streaming.scheduler.ReceiverTracker$ReceiverTrackerEndpoint$$anonfun$9.apply(ReceiverTracker.scala:597)
+	at org.apache.spark.SparkContext$$anonfun$34.apply(SparkContext.scala:2173)
+	at org.apache.spark.SparkContext$$anonfun$34.apply(SparkContext.scala:2173)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/08/30 15:37:41 ERROR client.StaticHostProvider: Unable to connect to server:  jp-bigdata-06:2181
+java.net.UnknownHostException:  jp-bigdata-06: 域名解析暂时失败
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.zookeeper.client.StaticHostProvider.<init>(StaticHostProvider.java:60)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:445)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:380)
+	at org.I0Itec.zkclient.ZkConnection.connect(ZkConnection.java:69)
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:1218)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:155)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:129)
+	at kafka.utils.ZkUtils$.createZkClientAndConnection(ZkUtils.scala:80)
+	at kafka.utils.ZkUtils$.apply(ZkUtils.scala:62)
+	at kafka.consumer.ZookeeperConsumerConnector.connectZk(ZookeeperConsumerConnector.scala:191)
+	at kafka.consumer.ZookeeperConsumerConnector.<init>(ZookeeperConsumerConnector.scala:139)
+	at kafka.consumer.ZookeeperConsumerConnector.<init>(ZookeeperConsumerConnector.scala:156)
+	at kafka.consumer.Consumer$.create(ConsumerConnector.scala:109)
+	at org.apache.spark.streaming.kafka.KafkaReceiver.onStart(KafkaInputDStream.scala:100)
+	at org.apache.spark.streaming.receiver.ReceiverSupervisor.startReceiver(ReceiverSupervisor.scala:149)
+	at org.apache.spark.streaming.receiver.ReceiverSupervisor.start(ReceiverSupervisor.scala:131)
+	at org.apache.spark.streaming.scheduler.ReceiverTracker$ReceiverTrackerEndpoint$$anonfun$9.apply(ReceiverTracker.scala:607)
+	at org.apache.spark.streaming.scheduler.ReceiverTracker$ReceiverTrackerEndpoint$$anonfun$9.apply(ReceiverTracker.scala:597)
+	at org.apache.spark.SparkContext$$anonfun$34.apply(SparkContext.scala:2173)
+	at org.apache.spark.SparkContext$$anonfun$34.apply(SparkContext.scala:2173)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/08/30 15:37:41 INFO zkclient.ZkClient: Waiting for keeper state SyncConnected
+17/08/30 15:37:41 INFO zookeeper.ClientCnxn: Opening socket connection to server jp-bigdata-02/192.168.1.242:2181. Will not attempt to authenticate using SASL (unknown error)
+17/08/30 15:37:41 INFO zookeeper.ClientCnxn: Socket connection established, initiating session, client: /192.168.1.246:37497, server: jp-bigdata-02/192.168.1.242:2181
+17/08/30 15:37:41 INFO zookeeper.ClientCnxn: Session establishment complete on server jp-bigdata-02/192.168.1.242:2181, sessionid = 0x15e27953955167f, negotiated timeout = 6000
+17/08/30 15:37:41 INFO zkclient.ZkClient: zookeeper state changed (SyncConnected)
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], starting auto committer every 60000 ms
+17/08/30 15:37:41 INFO kafka.KafkaReceiver: Connected to jp-bigdata-02:2181, jp-bigdata-03:2181, jp-bigdata-06:2181
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], begin registering consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098 in ZK
+17/08/30 15:37:41 INFO utils.ZKCheckedEphemeral: Creating /consumers/kafka-streaming-redis/ids/kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098 (is it secure? false)
+17/08/30 15:37:41 INFO utils.ZKCheckedEphemeral: Result of znode creation is: OK
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], end registering consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098 in ZK
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], starting watcher executor thread for consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], begin rebalancing consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098 try #0
+17/08/30 15:37:41 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1504078661305] Stopping leader finder thread
+17/08/30 15:37:41 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1504078661305] Stopping all fetchers
+17/08/30 15:37:41 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1504078661305] All connections stopped
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], Cleared all relevant queues for this fetcher
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], Cleared the data chunks in all the consumer message iterators
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], Committing all offsets after clearing the fetcher queues
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], Releasing partition ownership
+17/08/30 15:37:41 INFO consumer.RangeAssignor: Consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098 rebalancing the following partitions: ArrayBuffer(0) for topic test_flume_kafka with consumers: List(kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-0)
+17/08/30 15:37:41 INFO consumer.RangeAssignor: kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-0 attempting to claim partition 0
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-0 successfully owned partition 0 for topic test_flume_kafka
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], Consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098 selected partitions : test_flume_kafka:0: fetched offset = 15690: consumed offset = 15690
+17/08/30 15:37:41 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], end rebalancing consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098 try #0
+17/08/30 15:37:41 INFO receiver.ReceiverSupervisorImpl: Called receiver 0 onStart
+17/08/30 15:37:41 INFO receiver.ReceiverSupervisorImpl: Waiting for receiver to be stopped
+17/08/30 15:37:41 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-leader-finder-thread], Starting 
+17/08/30 15:37:41 INFO kafka.KafkaReceiver: Starting MessageHandler.
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Verifying properties
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Property client.id is overridden to kafka-streaming-redis
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Property metadata.broker.list is overridden to jp-bigdata-05:9092,jp-bigdata-06:9092,jp-bigdata-07:9092,jp-bigdata-04:9092,jp-bigdata-08:9092,jp-bigdata-09:9092,jp-bigdata-03:9092
+17/08/30 15:37:41 INFO utils.VerifiableProperties: Property request.timeout.ms is overridden to 30000
+17/08/30 15:37:41 INFO client.ClientUtils$: Fetching metadata from broker BrokerEndPoint(157,jp-bigdata-03,9092) with correlation id 0 for 1 topic(s) Set(test_flume_kafka)
+17/08/30 15:37:41 INFO producer.SyncProducer: Connected to jp-bigdata-03:9092 for producing
+17/08/30 15:37:41 INFO producer.SyncProducer: Disconnecting from jp-bigdata-03:9092
+17/08/30 15:37:41 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1504078661305] Added fetcher for partitions ArrayBuffer([[test_flume_kafka,0], initOffset 15690 to broker BrokerEndPoint(153,jp-bigdata-07,9092)] )
+17/08/30 15:37:41 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-0-153], Starting 
+17/08/30 15:37:42 INFO memory.MemoryStore: Block input-0-1504078661800 stored as bytes in memory (estimated size 338.7 KB, free 365.9 MB)
+17/08/30 15:37:42 INFO storage.BlockManagerInfo: Added input-0-1504078661800 in memory on 192.168.1.246:59401 (size: 338.7 KB, free: 365.9 MB)
+17/08/30 15:37:42 WARN storage.RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+17/08/30 15:37:42 WARN storage.BlockManager: Block input-0-1504078661800 replicated to only 0 peer(s) instead of 1 peers
+17/08/30 15:37:42 INFO receiver.BlockGenerator: Pushed block input-0-1504078661800
+17/08/30 15:37:42 INFO scheduler.JobScheduler: Added jobs for time 1504078662000 ms
+17/08/30 15:37:42 INFO scheduler.JobScheduler: Starting job streaming job 1504078662000 ms.0 from job set of time 1504078662000 ms
+17/08/30 15:37:42 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:446
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Registering RDD 3 (call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Got job 1 (runJob at PythonRDD.scala:446) with 1 output partitions
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Final stage: ResultStage 2 (runJob at PythonRDD.scala:446)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Missing parents: List()
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Submitting ResultStage 2 (PythonRDD[8] at RDD at PythonRDD.scala:48), which has no missing parents
+17/08/30 15:37:42 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.2 KB, free 365.9 MB)
+17/08/30 15:37:42 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.1 KB, free 365.9 MB)
+17/08/30 15:37:42 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.246:59401 (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:42 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (PythonRDD[8] at RDD at PythonRDD.scala:48) (first 15 tasks are for partitions Vector(0))
+17/08/30 15:37:42 INFO scheduler.TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 4621 bytes)
+17/08/30 15:37:42 INFO executor.Executor: Running task 0.0 in stage 2.0 (TID 1)
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 0 blocks
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 212, boot = 196, init = 13, finish = 3
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 40, boot = 5, init = 35, finish = 0
+17/08/30 15:37:42 INFO executor.Executor: Finished task 0.0 in stage 2.0 (TID 1). 1472 bytes result sent to driver
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 1) in 315 ms on localhost (executor driver) (1/1)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: ResultStage 2 (runJob at PythonRDD.scala:446) finished in 0.326 s
+17/08/30 15:37:42 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Job 1 finished: runJob at PythonRDD.scala:446, took 0.378591 s
+17/08/30 15:37:42 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:446
+17/08/30 15:37:42 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 83 bytes
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Got job 2 (runJob at PythonRDD.scala:446) with 4 output partitions
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Final stage: ResultStage 4 (runJob at PythonRDD.scala:446)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Missing parents: List()
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Submitting ResultStage 4 (PythonRDD[9] at RDD at PythonRDD.scala:48), which has no missing parents
+17/08/30 15:37:42 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.2 KB, free 365.9 MB)
+17/08/30 15:37:42 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.1 KB, free 365.8 MB)
+17/08/30 15:37:42 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.1.246:59401 (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:42 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 4 (PythonRDD[9] at RDD at PythonRDD.scala:48) (first 15 tasks are for partitions Vector(1, 2, 3, 4))
+17/08/30 15:37:42 INFO scheduler.TaskSchedulerImpl: Adding task set 4.0 with 4 tasks
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 2, localhost, executor driver, partition 1, PROCESS_LOCAL, 4621 bytes)
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 4.0 (TID 3, localhost, executor driver, partition 2, PROCESS_LOCAL, 4621 bytes)
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 4.0 (TID 4, localhost, executor driver, partition 3, PROCESS_LOCAL, 4621 bytes)
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 4.0 (TID 5, localhost, executor driver, partition 4, PROCESS_LOCAL, 4621 bytes)
+17/08/30 15:37:42 INFO executor.Executor: Running task 0.0 in stage 4.0 (TID 2)
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 0 blocks
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:42 INFO executor.Executor: Running task 1.0 in stage 4.0 (TID 3)
+17/08/30 15:37:42 INFO executor.Executor: Running task 2.0 in stage 4.0 (TID 4)
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 0 blocks
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 0 blocks
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+17/08/30 15:37:42 INFO executor.Executor: Running task 3.0 in stage 4.0 (TID 5)
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 0 blocks
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 51, boot = 8, init = 33, finish = 10
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 38, boot = 11, init = 11, finish = 16
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 81, boot = -108, init = 188, finish = 1
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 72, boot = 5, init = 40, finish = 27
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 42, boot = -3, init = 45, finish = 0
+17/08/30 15:37:42 INFO executor.Executor: Finished task 2.0 in stage 4.0 (TID 4). 1472 bytes result sent to driver
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 46, boot = -1, init = 47, finish = 0
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 48, boot = 0, init = 48, finish = 0
+17/08/30 15:37:42 INFO executor.Executor: Finished task 3.0 in stage 4.0 (TID 5). 1515 bytes result sent to driver
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 49, boot = 8, init = 41, finish = 0
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 4.0 (TID 4) in 156 ms on localhost (executor driver) (1/4)
+17/08/30 15:37:42 INFO executor.Executor: Finished task 0.0 in stage 4.0 (TID 2). 1472 bytes result sent to driver
+17/08/30 15:37:42 INFO executor.Executor: Finished task 1.0 in stage 4.0 (TID 3). 1472 bytes result sent to driver
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 4.0 (TID 5) in 168 ms on localhost (executor driver) (2/4)
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 4.0 (TID 3) in 170 ms on localhost (executor driver) (3/4)
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 2) in 176 ms on localhost (executor driver) (4/4)
+17/08/30 15:37:42 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: ResultStage 4 (runJob at PythonRDD.scala:446) finished in 0.182 s
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Job 2 finished: runJob at PythonRDD.scala:446, took 0.199550 s
+17/08/30 15:37:42 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:446
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Got job 3 (runJob at PythonRDD.scala:446) with 2 output partitions
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Final stage: ResultStage 6 (runJob at PythonRDD.scala:446)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Missing parents: List()
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Submitting ResultStage 6 (PythonRDD[10] at RDD at PythonRDD.scala:48), which has no missing parents
+17/08/30 15:37:42 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 7.2 KB, free 365.8 MB)
+17/08/30 15:37:42 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.1 KB, free 365.8 MB)
+17/08/30 15:37:42 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.1.246:59401 (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:42 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 6 (PythonRDD[10] at RDD at PythonRDD.scala:48) (first 15 tasks are for partitions Vector(5, 6))
+17/08/30 15:37:42 INFO scheduler.TaskSchedulerImpl: Adding task set 6.0 with 2 tasks
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6, localhost, executor driver, partition 5, PROCESS_LOCAL, 4621 bytes)
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 6.0 (TID 7, localhost, executor driver, partition 6, PROCESS_LOCAL, 4621 bytes)
+17/08/30 15:37:42 INFO executor.Executor: Running task 0.0 in stage 6.0 (TID 6)
+17/08/30 15:37:42 INFO executor.Executor: Running task 1.0 in stage 6.0 (TID 7)
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 0 blocks
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 0 blocks
+17/08/30 15:37:42 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 51, boot = -98, init = 148, finish = 1
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 50, boot = -98, init = 148, finish = 0
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 41, boot = -143, init = 184, finish = 0
+17/08/30 15:37:42 INFO executor.Executor: Finished task 0.0 in stage 6.0 (TID 6). 1472 bytes result sent to driver
+17/08/30 15:37:42 INFO python.PythonRunner: Times: total = 42, boot = -143, init = 185, finish = 0
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 113 ms on localhost (executor driver) (1/2)
+17/08/30 15:37:42 INFO executor.Executor: Finished task 1.0 in stage 6.0 (TID 7). 1472 bytes result sent to driver
+17/08/30 15:37:42 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 6.0 (TID 7) in 115 ms on localhost (executor driver) (2/2)
+17/08/30 15:37:42 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: ResultStage 6 (runJob at PythonRDD.scala:446) finished in 0.119 s
+17/08/30 15:37:42 INFO scheduler.DAGScheduler: Job 3 finished: runJob at PythonRDD.scala:446, took 0.142903 s
+17/08/30 15:37:42 INFO scheduler.JobScheduler: Finished job streaming job 1504078662000 ms.0 from job set of time 1504078662000 ms
+17/08/30 15:37:42 INFO scheduler.JobScheduler: Starting job streaming job 1504078662000 ms.1 from job set of time 1504078662000 ms
+17/08/30 15:37:42 INFO scheduler.JobScheduler: Finished job streaming job 1504078662000 ms.1 from job set of time 1504078662000 ms
+17/08/30 15:37:42 INFO scheduler.JobScheduler: Total delay: 0.953 s for time 1504078662000 ms (execution: 0.822 s)
+17/08/30 15:37:42 INFO scheduler.ReceivedBlockTracker: Deleting batches: 
+17/08/30 15:37:42 INFO scheduler.InputInfoTracker: remove old batch metadata: 
+17/08/30 15:37:43 INFO memory.MemoryStore: Block input-0-1504078663600 stored as bytes in memory (estimated size 139.0 B, free 365.8 MB)
+17/08/30 15:37:43 INFO storage.BlockManagerInfo: Added input-0-1504078663600 in memory on 192.168.1.246:59401 (size: 139.0 B, free: 365.9 MB)
+17/08/30 15:37:43 WARN storage.RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+17/08/30 15:37:43 WARN storage.BlockManager: Block input-0-1504078663600 replicated to only 0 peer(s) instead of 1 peers
+17/08/30 15:37:43 INFO receiver.BlockGenerator: Pushed block input-0-1504078663600
+17/08/30 15:37:44 INFO scheduler.JobScheduler: Added jobs for time 1504078664000 ms
+17/08/30 15:37:44 INFO scheduler.JobScheduler: Starting job streaming job 1504078664000 ms.0 from job set of time 1504078664000 ms
+17/08/30 15:37:44 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:446
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Registering RDD 13 (call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Got job 4 (runJob at PythonRDD.scala:446) with 1 output partitions
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Final stage: ResultStage 8 (runJob at PythonRDD.scala:446)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 7)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 7 (PairwiseRDD[13] at call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230), which has no missing parents
+17/08/30 15:37:44 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 9.0 KB, free 365.8 MB)
+17/08/30 15:37:44 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.6 KB, free 365.8 MB)
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.1.246:59401 (size: 5.6 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 7 (PairwiseRDD[13] at call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230) (first 15 tasks are for partitions Vector(0, 1))
+17/08/30 15:37:44 INFO scheduler.TaskSchedulerImpl: Adding task set 7.0 with 2 tasks
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 8, localhost, executor driver, partition 0, ANY, 4733 bytes)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 7.0 (TID 9, localhost, executor driver, partition 1, ANY, 4733 bytes)
+17/08/30 15:37:44 INFO executor.Executor: Running task 0.0 in stage 7.0 (TID 8)
+17/08/30 15:37:44 INFO executor.Executor: Running task 1.0 in stage 7.0 (TID 9)
+17/08/30 15:37:44 INFO storage.BlockManager: Found block input-0-1504078661800 locally
+17/08/30 15:37:44 INFO storage.BlockManager: Found block input-0-1504078663600 locally
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 65, boot = -1268, init = 1306, finish = 27
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 128, boot = -1269, init = 1397, finish = 0
+17/08/30 15:37:44 INFO executor.Executor: Finished task 0.0 in stage 7.0 (TID 8). 1461 bytes result sent to driver
+17/08/30 15:37:44 INFO executor.Executor: Finished task 1.0 in stage 7.0 (TID 9). 1418 bytes result sent to driver
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 8) in 178 ms on localhost (executor driver) (1/2)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 7.0 (TID 9) in 185 ms on localhost (executor driver) (2/2)
+17/08/30 15:37:44 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on 192.168.1.246:59401 in memory (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: ShuffleMapStage 7 (call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230) finished in 0.190 s
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: looking for newly runnable stages
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: running: Set(ResultStage 0)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 8)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: failed: Set()
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Submitting ResultStage 8 (PythonRDD[18] at RDD at PythonRDD.scala:48), which has no missing parents
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.1.246:59401 in memory (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on 192.168.1.246:59401 in memory (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 7.2 KB, free 365.8 MB)
+17/08/30 15:37:44 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.1 KB, free 365.8 MB)
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.1.246:59401 (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (PythonRDD[18] at RDD at PythonRDD.scala:48) (first 15 tasks are for partitions Vector(0))
+17/08/30 15:37:44 INFO scheduler.TaskSchedulerImpl: Adding task set 8.0 with 1 tasks
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 10, localhost, executor driver, partition 0, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO executor.Executor: Running task 0.0 in stage 8.0 (TID 10)
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 44, boot = -1433, init = 1476, finish = 1
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 40, boot = -1472, init = 1512, finish = 0
+17/08/30 15:37:44 INFO executor.Executor: Finished task 0.0 in stage 8.0 (TID 10). 1503 bytes result sent to driver
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 10) in 102 ms on localhost (executor driver) (1/1)
+17/08/30 15:37:44 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: ResultStage 8 (runJob at PythonRDD.scala:446) finished in 0.103 s
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Job 4 finished: runJob at PythonRDD.scala:446, took 0.358892 s
+17/08/30 15:37:44 INFO spark.SparkContext: Starting job: call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230
+17/08/30 15:37:44 INFO spark.MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 168 bytes
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Got job 5 (call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230) with 7 output partitions
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Final stage: ResultStage 10 (call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 9)
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Missing parents: List()
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Submitting ResultStage 10 (PythonRDD[16] at RDD at PythonRDD.scala:48), which has no missing parents
+17/08/30 15:37:44 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 6.3 KB, free 365.8 MB)
+17/08/30 15:37:44 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 3.9 KB, free 365.8 MB)
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on 192.168.1.246:59401 (size: 3.9 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO spark.SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Submitting 7 missing tasks from ResultStage 10 (PythonRDD[16] at RDD at PythonRDD.scala:48) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6))
+17/08/30 15:37:44 INFO scheduler.TaskSchedulerImpl: Adding task set 10.0 with 7 tasks
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 10.0 (TID 11, localhost, executor driver, partition 0, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 10.0 (TID 12, localhost, executor driver, partition 1, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 10.0 (TID 13, localhost, executor driver, partition 2, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 10.0 (TID 14, localhost, executor driver, partition 3, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 10.0 (TID 15, localhost, executor driver, partition 4, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 10.0 (TID 16, localhost, executor driver, partition 5, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO executor.Executor: Running task 0.0 in stage 10.0 (TID 11)
+17/08/30 15:37:44 INFO executor.Executor: Running task 1.0 in stage 10.0 (TID 12)
+17/08/30 15:37:44 INFO executor.Executor: Running task 3.0 in stage 10.0 (TID 14)
+17/08/30 15:37:44 INFO executor.Executor: Running task 2.0 in stage 10.0 (TID 13)
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:44 INFO executor.Executor: Running task 4.0 in stage 10.0 (TID 15)
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:44 INFO executor.Executor: Running task 5.0 in stage 10.0 (TID 16)
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on 192.168.1.246:59401 in memory (size: 4.1 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on 192.168.1.246:59401 in memory (size: 5.6 KB, free: 365.9 MB)
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 29, boot = 4, init = 19, finish = 6
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 27, boot = 3, init = 20, finish = 4
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 34, boot = 3, init = 13, finish = 18
+17/08/30 15:37:44 INFO executor.Executor: Finished task 4.0 in stage 10.0 (TID 15). 4797 bytes result sent to driver
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 10.0 (TID 17, localhost, executor driver, partition 6, ANY, 4621 bytes)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 10.0 (TID 15) in 182 ms on localhost (executor driver) (1/7)
+17/08/30 15:37:44 INFO executor.Executor: Running task 6.0 in stage 10.0 (TID 17)
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/08/30 15:37:44 INFO storage.ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/08/30 15:37:44 INFO executor.Executor: Finished task 3.0 in stage 10.0 (TID 14). 4893 bytes result sent to driver
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 58, boot = -373, init = 431, finish = 0
+17/08/30 15:37:44 INFO executor.Executor: Finished task 5.0 in stage 10.0 (TID 16). 4539 bytes result sent to driver
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 10.0 (TID 14) in 190 ms on localhost (executor driver) (2/7)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 10.0 (TID 16) in 190 ms on localhost (executor driver) (3/7)
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 57, boot = -206, init = 263, finish = 0
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 64, boot = -323, init = 387, finish = 0
+17/08/30 15:37:44 INFO executor.Executor: Finished task 2.0 in stage 10.0 (TID 13). 4814 bytes result sent to driver
+17/08/30 15:37:44 INFO executor.Executor: Finished task 1.0 in stage 10.0 (TID 12). 4633 bytes result sent to driver
+17/08/30 15:37:44 INFO executor.Executor: Finished task 0.0 in stage 10.0 (TID 11). 4529 bytes result sent to driver
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 10.0 (TID 13) in 210 ms on localhost (executor driver) (4/7)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 10.0 (TID 12) in 210 ms on localhost (executor driver) (5/7)
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 10.0 (TID 11) in 212 ms on localhost (executor driver) (6/7)
+17/08/30 15:37:44 INFO python.PythonRunner: Times: total = 55, boot = -16, init = 70, finish = 1
+17/08/30 15:37:44 INFO executor.Executor: Finished task 6.0 in stage 10.0 (TID 17). 4254 bytes result sent to driver
+17/08/30 15:37:44 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 10.0 (TID 17) in 64 ms on localhost (executor driver) (7/7)
+17/08/30 15:37:44 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: ResultStage 10 (call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230) finished in 0.246 s
+17/08/30 15:37:44 INFO scheduler.DAGScheduler: Job 5 finished: call at /opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py:2230, took 0.261305 s
+('2017-08-30', '15', '66.1.246.109', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '76.54.18.103', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '95.109.115.144', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '168.92.179.77', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '144.196.145.166', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.204.111.204', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '94.2.183.141', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '111.203.65.125', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '246.182.11.232', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '185.44.79.6', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '226.174.253.2', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '184.194.34.156', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '130.247.150.33', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '151.206.83.96', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '110.161.13.137', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '122.105.91.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '116.40.16.194', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '208.41.186.24', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '175.253.116.245', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '77.205.208.164', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '184.225.150.94', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '132.183.214.101', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '198.251.126.251', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '53.40.64.246', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '95.103.52.3', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '5.175.145.117', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '3.1.162.204', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '97.41.40.15', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '40.2.106.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '95.56.165.174', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '126.127.76.110', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '13.59.247.71', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '228.134.106.89', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '202.136.70.172', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '208.126.162.220', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '32.254.246.99', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '167.10.76.233', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '52.118.232.61', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '137.72.215.179', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '163.81.248.79', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '179.98.207.123', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '249.230.182.255', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '148.247.182.47', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '50.138.10.27', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '115.81.74.1', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '82.4.205.229', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '140.222.9.1', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.239.197.32', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '197.45.195.130', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '202.13.171.207', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '229.44.211.103', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '39.101.219.92', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '28.186.186.126', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '63.252.255.54', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.42.191.101', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '211.177.23.144', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '247.255.157.19', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '227.202.90.91', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '204.229.107.131', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '74.28.14.33', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '24.246.127.194', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '64.120.180.27', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '184.81.186.134', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '50.90.95.181', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '36.50.188.134', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.253.46.15', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '221.166.157.70', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '196.140.232.171', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '97.207.173.31', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '94.114.49.206', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '78.138.130.162', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '206.78.14.44', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '207.88.176.114', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.210.63.65', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '68.230.253.117', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '12.15.241.104', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '227.14.114.157', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '204.50.237.193', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '134.112.122.162', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '94.78.250.138', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '161.83.222.46', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '139.1.251.171', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.131.82.216', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '181.94.193.119', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '166.47.99.181', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '186.248.250.63', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '151.26.253.215', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '218.122.228.136', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '117.249.187.16', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '228.29.96.235', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '90.87.90.183', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '9.130.196.110', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '204.142.58.95', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '144.73.204.209', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '13.21.18.136', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.22.71.190', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '45.11.20.132', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '32.64.104.24', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '106.237.176.254', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '208.21.125.29', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '214.163.159.131', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '111.79.136.234', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '195.139.8.61', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '40.255.58.88', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '3.29.247.236', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '234.29.89.45', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '189.111.39.42', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '252.216.6.67', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '203.175.137.59', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '66.41.15.231', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '223.60.165.195', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '2.48.172.249', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '247.167.78.102', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '223.2.212.217', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '14.92.11.67', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '80.113.240.52', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '111.118.101.19', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '123.236.29.232', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '123.44.147.53', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '216.26.112.58', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '77.57.134.63', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '152.148.35.31', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '196.23.240.108', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '66.138.55.81', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '155.162.165.14', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '129.43.72.203', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.169.126.112', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '242.198.18.29', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '201.85.195.1', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '101.13.163.199', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '208.161.38.10', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '140.110.116.116', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '213.117.90.130', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '152.251.234.6', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '117.46.241.230', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '189.31.162.62', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '71.102.31.102', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '176.178.242.178', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '193.173.80.176', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '208.107.174.70', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '22.143.158.179', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.58.112.134', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '183.126.153.90', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.102.147.117', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '26.213.44.222', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '72.186.99.186', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '17.139.191.245', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '112.154.214.174', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '8.68.138.131', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '129.97.255.147', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '215.17.56.35', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '18.54.174.39', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '242.201.36.205', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '80.162.141.160', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '128.112.121.135', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '83.62.158.194', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '66.253.239.73', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '36.198.111.49', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.19.202.234', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '248.35.115.173', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '205.117.10.29', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '126.205.156.140', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '56.198.62.24', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '222.202.97.223', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '47.29.229.168', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '111.174.184.119', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '124.211.16.70', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '236.209.45.155', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '69.190.106.80', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '122.91.153.25', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '84.242.195.79', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '36.224.40.101', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '248.223.222.158', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '149.79.140.173', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '254.2.19.28', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '150.14.44.55', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '234.255.103.60', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '162.68.75.203', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '182.36.143.181', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '209.63.198.206', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '244.173.52.10', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '161.30.220.61', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '43.33.219.102', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '112.13.254.35', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.35.7.163', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '150.230.217.175', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '191.157.9.246', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '77.2.195.127', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '188.32.94.92', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.88.133.111', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '174.219.62.220', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '242.63.214.187', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '151.50.245.123', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '167.73.143.201', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '148.44.139.137', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '149.177.66.106', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '218.181.69.205', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '71.91.137.114', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '122.62.249.103', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '41.73.244.217', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '159.47.60.233', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.180.142.116', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '53.196.6.241', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '75.122.84.110', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '93.3.131.151', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '183.14.186.147', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '55.39.171.57', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.57.100.63', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '110.230.16.153', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.165.230.31', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '6.194.98.62', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '53.108.38.251', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '18.89.249.78', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '228.34.14.63', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '67.249.48.242', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.31.241.108', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '178.37.140.8', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '83.130.219.133', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '248.116.157.220', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '129.221.42.118', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '209.236.188.139', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '208.139.145.61', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '126.183.189.112', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '93.176.118.89', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '12.245.188.228', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '154.250.7.252', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '17.152.81.111', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '124.71.247.204', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '110.168.134.244', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '170.163.57.41', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '197.68.131.246', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '103.38.120.230', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '221.145.97.22', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '46.107.209.56', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '208.162.176.154', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.33.89.41', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '61.191.214.63', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '152.115.144.6', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '55.140.138.82', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '83.185.159.175', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '88.206.136.16', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '150.71.243.28', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '201.86.108.89', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '59.226.43.213', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '181.92.189.101', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '234.33.91.173', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '36.156.30.119', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '102.43.27.224', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '253.212.206.108', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '162.1.196.4', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '235.69.226.28', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '79.71.223.62', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '27.81.253.147', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '29.102.171.184', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '101.49.147.127', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '159.78.206.191', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '87.153.161.144', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '226.166.59.219', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '78.9.54.151', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '202.9.84.106', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '75.78.124.80', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '195.46.108.224', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '214.36.97.76', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '32.66.136.28', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '186.38.109.166', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '26.154.243.52', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '182.252.253.175', '3')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '1.102.124.4', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '130.184.77.149', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '105.93.186.240', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '253.129.10.250', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '57.206.72.68', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '124.166.228.63', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '96.14.3.75', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '133.225.164.225', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '199.164.116.24', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '214.255.236.126', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '51.114.128.129', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '29.155.231.15', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '166.130.210.182', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '181.144.94.157', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '164.136.255.173', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '69.138.119.21', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '130.41.229.158', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '254.6.99.161', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '168.143.122.128', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '18.89.76.8', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '27.166.49.252', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '135.156.239.48', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '70.33.25.89', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '171.254.231.195', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '210.21.15.213', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '210.129.46.8', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '195.36.175.191', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '37.116.208.231', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '28.158.217.3', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '81.57.153.212', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '123.201.87.211', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '245.29.217.113', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '76.18.121.79', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '187.203.236.173', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '204.128.16.101', '3')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '18.250.109.44', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '108.19.60.114', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '253.70.31.201', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '93.118.228.100', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '79.143.249.229', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '72.164.208.156', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '128.243.109.27', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '148.239.13.107', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '249.126.251.196', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '209.142.178.186', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '162.208.97.76', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '73.161.128.175', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '219.74.109.172', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '245.176.199.99', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '69.156.193.207', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '32.112.237.193', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '25.31.110.83', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '143.73.27.130', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '189.246.67.167', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '43.247.146.5', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '242.230.131.127', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '249.100.49.103', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '191.231.218.249', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '189.171.7.14', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '94.225.176.186', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '244.169.2.49', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '152.108.103.225', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '218.132.178.134', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '200.144.129.187', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '231.18.238.193', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '113.156.206.222', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '8.149.248.82', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '44.150.112.137', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '162.147.159.210', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '151.248.123.58', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '136.74.107.232', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '230.175.149.155', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '46.76.222.161', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '17.79.99.195', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '13.234.165.218', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '65.108.7.71', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '205.69.110.154', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '35.65.158.42', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '61.140.174.234', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '19.15.222.239', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '49.12.255.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '44.200.160.219', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '180.225.204.255', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '149.108.51.254', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '123.153.199.243', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '185.161.179.128', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '113.247.222.15', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '209.173.42.186', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '201.165.100.108', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '75.17.164.186', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '153.138.61.180', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '239.209.35.146', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '123.25.174.93', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.50.234.207', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '88.37.118.245', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '39.27.151.232', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '227.121.105.4', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '67.231.102.8', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '152.13.228.194', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '124.238.22.22', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '17.32.30.124', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '173.158.147.5', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '245.8.28.115', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '154.21.215.15', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '144.62.253.198', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '160.209.166.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '47.242.75.144', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '85.19.245.189', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '229.225.169.236', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '150.26.117.56', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '59.99.28.24', '2')
+insert data sucessfully !!-------------
+17/08/30 15:37:46 INFO scheduler.JobScheduler: Added jobs for time 1504078666000 ms
+('2017-08-30', '15', '177.71.195.68', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '232.227.117.120', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '178.157.246.51', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '134.248.133.176', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '59.144.160.241', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.21.159.23', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '161.169.212.138', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '211.15.236.193', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '35.63.165.246', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '193.141.183.175', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '167.235.58.144', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '203.93.11.68', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '159.20.186.14', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '94.226.177.127', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '35.35.99.6', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '136.222.211.25', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '226.70.108.249', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.77.250.244', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '155.133.38.210', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '167.136.105.238', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '87.145.187.27', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '118.71.91.22', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '111.199.134.206', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '198.75.168.88', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '213.150.210.182', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '235.206.213.117', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.28.75.146', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '250.91.12.138', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '147.101.180.10', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '199.115.68.70', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '166.243.120.47', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '18.102.52.5', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '251.93.138.156', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '115.39.236.143', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '30.123.193.71', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '136.15.116.125', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '8.99.111.86', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '84.48.102.153', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '216.171.139.134', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '45.55.70.239', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '217.83.153.16', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '251.119.246.166', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '24.83.193.4', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '2.196.38.85', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '147.199.158.49', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '31.136.210.99', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '141.86.231.250', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '33.11.221.202', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '204.81.197.213', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '28.167.70.30', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '77.196.35.253', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '149.207.17.140', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '62.196.59.242', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '73.181.79.125', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '84.252.43.13', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '110.96.127.247', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '128.14.11.68', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '183.25.205.71', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '85.177.181.85', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '65.217.134.57', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '40.202.52.228', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '1.130.39.236', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '128.137.139.216', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '75.147.160.208', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '237.118.245.221', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '48.84.179.204', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '103.2.32.12', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '218.127.250.226', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '9.18.14.148', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '62.69.55.119', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '245.255.3.43', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '84.203.166.45', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '156.211.143.215', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '199.73.14.19', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '17.120.250.225', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '159.19.119.77', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '141.108.104.201', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '91.5.105.121', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '225.147.121.50', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '222.37.201.146', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '139.145.236.95', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '188.94.14.155', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '221.66.103.39', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '223.168.242.177', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '56.193.92.183', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '39.130.49.97', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '185.242.243.226', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '93.136.193.124', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '22.120.235.149', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '97.98.223.112', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '206.47.237.20', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '3.53.98.84', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '133.113.211.28', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '98.92.236.1', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '146.168.255.133', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '239.196.241.252', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.53.122.98', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.204.164.224', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '174.198.98.102', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '255.254.74.153', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '176.228.207.14', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.138.64.179', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '203.21.131.185', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '70.182.220.153', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '82.228.49.6', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '72.11.147.99', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '228.242.242.94', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '113.29.64.6', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '150.1.18.29', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '114.179.164.109', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '178.19.43.211', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '9.180.199.61', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '189.232.135.67', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '8.240.25.131', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '218.40.124.47', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '204.15.131.158', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '164.136.196.122', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '36.26.25.72', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.49.115.64', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '77.219.162.42', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '108.249.6.161', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.47.211.6', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '179.44.224.129', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '197.9.203.101', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.70.61.199', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '8.139.131.74', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '109.248.207.21', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '80.199.227.9', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '157.170.188.76', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '92.168.29.127', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '152.42.62.81', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '84.182.123.135', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '247.172.37.9', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '221.251.49.54', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '147.167.20.22', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '136.164.192.183', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '220.175.218.7', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '229.204.106.195', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '12.64.76.173', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '224.250.174.45', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '30.141.82.157', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '197.229.138.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '72.36.25.72', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '60.239.38.92', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '202.150.173.56', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '88.67.134.236', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '152.164.55.245', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '32.123.171.104', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '43.155.238.55', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '78.192.2.145', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '248.226.209.148', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '230.144.216.255', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '244.228.169.128', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '213.116.68.117', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '29.186.243.31', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '167.126.191.44', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '137.52.139.194', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '132.40.228.52', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '34.196.35.106', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.183.105.69', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '110.202.36.76', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '186.209.132.141', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '151.223.53.63', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '61.28.32.114', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '58.159.23.3', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '137.53.87.245', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '94.142.246.232', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '120.211.115.231', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '9.181.108.121', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '215.52.132.162', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '166.142.131.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '124.165.202.71', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '210.198.191.31', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '185.101.13.183', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '242.153.138.48', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '207.116.124.222', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '13.83.23.50', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '168.70.198.12', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '112.148.172.126', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '66.163.3.148', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '99.238.9.226', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '7.199.175.64', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '28.30.55.84', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '158.66.101.155', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '199.41.234.193', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '154.82.35.146', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '76.86.198.141', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '239.42.46.183', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '56.237.48.253', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '35.119.162.219', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '190.193.238.37', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '138.122.113.15', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '195.64.58.244', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '196.253.198.200', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '212.108.23.184', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '228.237.226.224', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '151.126.198.99', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '142.237.206.139', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '25.114.60.213', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '226.253.225.213', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '30.52.222.68', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '136.162.21.133', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '77.93.169.224', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '131.111.151.251', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '122.181.131.239', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '148.1.220.160', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '194.172.231.53', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '28.208.39.147', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '76.129.205.43', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '233.29.8.74', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '52.233.53.12', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '123.232.88.159', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '184.215.41.98', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '88.253.150.57', '3')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '119.51.110.37', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '60.162.225.223', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '201.237.241.249', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '23.85.178.112', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '221.145.20.166', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '35.100.94.176', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '185.228.232.134', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '74.138.165.51', '3')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '30.89.80.177', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '237.242.142.45', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '218.39.253.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '74.228.201.163', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '162.60.99.70', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '93.164.147.194', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '226.127.154.112', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '123.177.166.218', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '150.67.232.178', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '206.170.148.211', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '217.11.32.17', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '226.191.164.27', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '247.213.168.209', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '125.152.21.45', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '249.164.255.179', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '3.155.148.217', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '230.162.91.2', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '223.82.235.100', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '222.251.55.200', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '92.127.142.126', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '240.149.43.144', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '106.79.237.83', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '56.224.103.180', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '104.41.124.204', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '17.153.92.88', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '5.33.249.221', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '86.105.103.232', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '36.233.130.224', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '249.147.40.71', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '61.8.166.155', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '125.230.37.230', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '173.181.9.98', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '113.205.204.58', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '22.63.201.232', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '47.200.99.98', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '253.11.126.50', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '36.12.29.18', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '112.230.48.251', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '153.199.242.47', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '237.185.61.28', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '109.118.38.38', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '44.173.229.132', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '198.43.9.192', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '103.68.70.110', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '182.177.249.126', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '149.253.246.55', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '94.104.129.21', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '18.142.32.38', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '199.19.23.152', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '90.62.81.145', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '184.244.155.124', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '85.227.132.134', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '140.1.187.178', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '88.47.217.181', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '99.25.212.221', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '30.235.156.48', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '205.32.183.170', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '41.134.63.237', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '179.23.149.120', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '86.5.202.16', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '215.28.111.72', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '15.120.19.197', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '62.199.39.89', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '53.100.78.47', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '47.70.227.41', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '76.151.169.68', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '63.84.54.175', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '140.69.162.171', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '98.186.243.106', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '228.14.16.143', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '162.226.226.112', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '137.99.180.103', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '80.112.109.132', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '212.189.3.11', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '24.123.68.152', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '175.34.28.79', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '150.211.118.213', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '196.51.143.55', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '157.69.156.90', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '18.229.1.174', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '70.192.50.214', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '87.211.131.250', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '89.70.130.103', '4')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '64.29.175.218', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '253.124.255.176', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '19.100.194.75', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '206.2.164.129', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '193.35.60.22', '2')
+insert data sucessfully !!-------------
+('2017-08-30', '15', '109.234.99.106', '2')
+insert data sucessfully !!-------------
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Finished job streaming job 1504078664000 ms.0 from job set of time 1504078664000 ms
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Starting job streaming job 1504078664000 ms.1 from job set of time 1504078664000 ms
+17/08/30 15:37:47 ERROR scheduler.JobScheduler: Error running job streaming job 1504078664000 ms.0
+org.apache.spark.SparkException: An exception was raised by Python:
+Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/streaming/util.py", line 65, in call
+    r = self.func(t, *rdds)
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 163, in ipHandle
+    r.addToHashSet(statis_date, statis_hour, element[0], element[1])
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 87, in addToHashSet
+    if r.hexists(hashSetName, str(key)):
+UnicodeEncodeError: 'ascii' codec can't encode character u'\u5e74' in position 4: ordinal not in range(128)
+
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:95)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Traceback (most recent call last):
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 182, in <module>
+    main()
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 178, in main
+    ssc.awaitTermination()
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/streaming/context.py", line 206, in awaitTermination
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/java_gateway.py", line 1133, in __call__
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/py4j-0.10.4-src.zip/py4j/protocol.py", line 319, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o46.awaitTermination.
+: org.apache.spark.SparkException: An exception was raised by Python:
+Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/streaming/util.py", line 65, in call
+    r = self.func(t, *rdds)
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 163, in ipHandle
+    r.addToHashSet(statis_date, statis_hour, element[0], element[1])
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 87, in addToHashSet
+    if r.hexists(hashSetName, str(key)):
+UnicodeEncodeError: 'ascii' codec can't encode character u'\u5e74' in position 4: ordinal not in range(128)
+
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:95)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/08/30 15:37:47 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:446
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: Got job 6 (runJob at PythonRDD.scala:446) with 1 output partitions
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: Final stage: ResultStage 11 (runJob at PythonRDD.scala:446)
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: Parents of final stage: List()
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: Missing parents: List()
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: Submitting ResultStage 11 (PythonRDD[26] at RDD at PythonRDD.scala:48), which has no missing parents
+17/08/30 15:37:47 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 6.0 KB, free 365.9 MB)
+17/08/30 15:37:47 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 3.6 KB, free 365.9 MB)
+17/08/30 15:37:47 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on 192.168.1.246:59401 (size: 3.6 KB, free: 365.9 MB)
+17/08/30 15:37:47 INFO spark.SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (PythonRDD[26] at RDD at PythonRDD.scala:48) (first 15 tasks are for partitions Vector(0))
+17/08/30 15:37:47 INFO scheduler.TaskSchedulerImpl: Adding task set 11.0 with 1 tasks
+17/08/30 15:37:47 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 11.0 (TID 18, localhost, executor driver, partition 0, ANY, 4744 bytes)
+17/08/30 15:37:47 INFO executor.Executor: Running task 0.0 in stage 11.0 (TID 18)
+17/08/30 15:37:47 INFO storage.BlockManager: Found block input-0-1504078661800 locally
+17/08/30 15:37:47 INFO streaming.StreamingContext: Invoking stop(stopGracefully=false) from shutdown hook
+17/08/30 15:37:47 ERROR python.PythonRunner: Python worker exited unexpectedly (crashed)
+org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 162, in main
+    is_sql_udf = read_int(infile)
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/serializers.py", line 577, in read_int
+    raise EOFError
+EOFError
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:193)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:234)
+	at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:152)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:63)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 177, in main
+    process()
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 172, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/serializers.py", line 268, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 140, in <lambda>
+    'url': line[10] \
+IndexError: list index out of range
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:193)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:156)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:152)
+	at org.apache.spark.InterruptibleIterator.next(InterruptibleIterator.scala:40)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:509)
+	at org.apache.spark.api.python.PythonRunner$WriterThread$$anonfun$run$3.apply(PythonRDD.scala:333)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1954)
+	at org.apache.spark.api.python.PythonRunner$WriterThread.run(PythonRDD.scala:269)
+17/08/30 15:37:47 ERROR python.PythonRunner: This may have been caused by a prior exception:
+org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 177, in main
+    process()
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 172, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/serializers.py", line 268, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 140, in <lambda>
+    'url': line[10] \
+IndexError: list index out of range
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:193)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:156)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:152)
+	at org.apache.spark.InterruptibleIterator.next(InterruptibleIterator.scala:40)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:509)
+	at org.apache.spark.api.python.PythonRunner$WriterThread$$anonfun$run$3.apply(PythonRDD.scala:333)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1954)
+	at org.apache.spark.api.python.PythonRunner$WriterThread.run(PythonRDD.scala:269)
+17/08/30 15:37:47 ERROR executor.Executor: Exception in task 0.0 in stage 11.0 (TID 18)
+org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 177, in main
+    process()
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 172, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/serializers.py", line 268, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 140, in <lambda>
+    'url': line[10] \
+IndexError: list index out of range
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:193)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:156)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:152)
+	at org.apache.spark.InterruptibleIterator.next(InterruptibleIterator.scala:40)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:509)
+	at org.apache.spark.api.python.PythonRunner$WriterThread$$anonfun$run$3.apply(PythonRDD.scala:333)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1954)
+	at org.apache.spark.api.python.PythonRunner$WriterThread.run(PythonRDD.scala:269)
+17/08/30 15:37:47 INFO scheduler.ReceiverTracker: Sent stop signal to all 1 receivers
+17/08/30 15:37:47 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 11.0 (TID 18, localhost, executor driver): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 177, in main
+    process()
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 172, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/serializers.py", line 268, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 140, in <lambda>
+    'url': line[10] \
+IndexError: list index out of range
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:193)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:156)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:152)
+	at org.apache.spark.InterruptibleIterator.next(InterruptibleIterator.scala:40)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:509)
+	at org.apache.spark.api.python.PythonRunner$WriterThread$$anonfun$run$3.apply(PythonRDD.scala:333)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1954)
+	at org.apache.spark.api.python.PythonRunner$WriterThread.run(PythonRDD.scala:269)
+
+17/08/30 15:37:47 ERROR scheduler.TaskSetManager: Task 0 in stage 11.0 failed 1 times; aborting job
+17/08/30 15:37:47 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+17/08/30 15:37:47 INFO receiver.ReceiverSupervisorImpl: Received stop signal
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Finished job streaming job 1504078664000 ms.1 from job set of time 1504078664000 ms
+17/08/30 15:37:47 INFO scheduler.TaskSchedulerImpl: Cancelling stage 11
+17/08/30 15:37:47 INFO receiver.ReceiverSupervisorImpl: Stopping receiver with message: Stopped by driver: 
+17/08/30 15:37:47 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], ZKConsumerConnector shutting down
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Starting job streaming job 1504078666000 ms.0 from job set of time 1504078666000 ms
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Finished job streaming job 1504078666000 ms.0 from job set of time 1504078666000 ms
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Starting job streaming job 1504078666000 ms.1 from job set of time 1504078666000 ms
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Finished job streaming job 1504078666000 ms.1 from job set of time 1504078666000 ms
+17/08/30 15:37:47 ERROR scheduler.JobScheduler: Error running job streaming job 1504078664000 ms.1
+py4j.Py4JException: Error while sending a command.
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:357)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:316)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:103)
+	at com.sun.proxy.$Proxy22.call(Unknown Source)
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:92)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: py4j.Py4JNetworkException
+	at py4j.CallbackConnection.sendCommand(CallbackConnection.java:138)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:344)
+	... 24 more
+17/08/30 15:37:47 ERROR scheduler.JobScheduler: Error running job streaming job 1504078666000 ms.0
+py4j.Py4JException: Cannot obtain a new communication channel
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:340)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:316)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:103)
+	at com.sun.proxy.$Proxy22.call(Unknown Source)
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:92)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: ResultStage 11 (runJob at PythonRDD.scala:446) failed in 0.097 s due to Job aborted due to stage failure: Task 0 in stage 11.0 failed 1 times, most recent failure: Lost task 0.0 in stage 11.0 (TID 18, localhost, executor driver): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 177, in main
+    process()
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/worker.py", line 172, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/opt/cloudera/parcels/SPARK2-2.2.0.cloudera1-1.cdh5.12.0.p0.142354/lib/spark2/python/lib/pyspark.zip/pyspark/serializers.py", line 268, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "/var/lib/hadoop-hdfs/sparkStreamingForRedis.py", line 140, in <lambda>
+    'url': line[10] \
+IndexError: list index out of range
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:193)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:156)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.next(PythonRDD.scala:152)
+	at org.apache.spark.InterruptibleIterator.next(InterruptibleIterator.scala:40)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:509)
+	at org.apache.spark.api.python.PythonRunner$WriterThread$$anonfun$run$3.apply(PythonRDD.scala:333)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1954)
+	at org.apache.spark.api.python.PythonRunner$WriterThread.run(PythonRDD.scala:269)
+
+Driver stacktrace:
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: Job 6 failed: runJob at PythonRDD.scala:446, took 0.112801 s
+17/08/30 15:37:47 ERROR scheduler.JobScheduler: Error running job streaming job 1504078666000 ms.1
+py4j.Py4JException: Cannot obtain a new communication channel
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:340)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:316)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:103)
+	at com.sun.proxy.$Proxy22.call(Unknown Source)
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:92)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1504078661305] Stopping leader finder thread
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-leader-finder-thread], Shutting down
+17/08/30 15:37:47 ERROR python.PythonDStream$$anon$1: Cannot connect to Python process. It's probably dead. Stopping StreamingContext.
+py4j.Py4JException: Cannot obtain a new communication channel
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:340)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:316)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:103)
+	at com.sun.proxy.$Proxy22.call(Unknown Source)
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:92)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-leader-finder-thread], Shutdown completed
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1504078661305] Stopping all fetchers
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-0-153], Shutting down
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-leader-finder-thread], Stopped 
+17/08/30 15:37:47 INFO consumer.SimpleConsumer: Reconnect due to error:
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:118)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:103)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:94)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-0-153], Shutdown completed
+17/08/30 15:37:47 ERROR python.PythonDStream$$anon$1: Cannot connect to Python process. It's probably dead. Stopping StreamingContext.
+py4j.Py4JException: Cannot obtain a new communication channel
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:340)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:316)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:103)
+	at com.sun.proxy.$Proxy22.call(Unknown Source)
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:92)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098-0-153], Stopped 
+17/08/30 15:37:47 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1504078661305] All connections stopped
+17/08/30 15:37:47 INFO zkclient.ZkEventThread: Terminate ZkClient event thread.
+17/08/30 15:37:47 INFO zookeeper.ZooKeeper: Session: 0x15e27953955167f closed
+17/08/30 15:37:47 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], ZKConsumerConnector shutdown completed in 47 ms
+17/08/30 15:37:47 INFO receiver.ReceiverSupervisorImpl: Called receiver onStop
+17/08/30 15:37:47 INFO zookeeper.ClientCnxn: EventThread shut down
+17/08/30 15:37:47 INFO receiver.ReceiverSupervisorImpl: Deregistering receiver 0
+17/08/30 15:37:47 ERROR scheduler.ReceiverTracker: Deregistered receiver for stream 0: Stopped by driver
+17/08/30 15:37:47 INFO receiver.ReceiverSupervisorImpl: Stopped receiver 0
+17/08/30 15:37:47 INFO receiver.BlockGenerator: Stopping BlockGenerator
+17/08/30 15:37:47 INFO consumer.ZookeeperConsumerConnector: [kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098], stopping watcher executor thread for consumer kafka-streaming-redis_jp-bigdata-06-1504078661240-d1eda098
+17/08/30 15:37:47 INFO util.RecurringTimer: Stopped timer for BlockGenerator after time 1504078667600
+17/08/30 15:37:47 INFO receiver.BlockGenerator: Waiting for block pushing thread to terminate
+17/08/30 15:37:47 INFO receiver.BlockGenerator: Pushing out the last 0 blocks
+17/08/30 15:37:47 INFO receiver.BlockGenerator: Stopped block pushing thread
+17/08/30 15:37:47 INFO receiver.BlockGenerator: Stopped BlockGenerator
+17/08/30 15:37:47 INFO receiver.ReceiverSupervisorImpl: Stopped receiver without error
+17/08/30 15:37:47 INFO executor.Executor: Finished task 0.0 in stage 0.0 (TID 0). 709 bytes result sent to driver
+17/08/30 15:37:47 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 6642 ms on localhost (executor driver) (1/1)
+17/08/30 15:37:47 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+17/08/30 15:37:47 INFO scheduler.DAGScheduler: ResultStage 0 (start at NativeMethodAccessorImpl.java:0) finished in 6.663 s
+17/08/30 15:37:47 INFO scheduler.ReceiverTracker: All of the receivers have deregistered successfully
+17/08/30 15:37:47 INFO scheduler.ReceiverTracker: ReceiverTracker stopped
+17/08/30 15:37:47 INFO scheduler.JobGenerator: Stopping JobGenerator immediately
+17/08/30 15:37:47 INFO util.RecurringTimer: Stopped timer for JobGenerator after time 1504078666000
+17/08/30 15:37:47 INFO scheduler.JobGenerator: Stopped JobGenerator
+17/08/30 15:37:47 INFO scheduler.JobScheduler: Stopped JobScheduler
+17/08/30 15:37:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@4b5fa786{/streaming,null,UNAVAILABLE,@Spark}
+17/08/30 15:37:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@6cc39599{/streaming/batch,null,UNAVAILABLE,@Spark}
+17/08/30 15:37:47 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@20145675{/static/streaming,null,UNAVAILABLE,@Spark}
+17/08/30 15:37:47 INFO streaming.StreamingContext: StreamingContext stopped successfully
+17/08/30 15:37:47 INFO spark.SparkContext: Invoking stop() from shutdown hook
+17/08/30 15:37:47 WARN streaming.StreamingContext: StreamingContext has already been stopped
+17/08/30 15:37:47 INFO server.AbstractConnector: Stopped Spark@55245576{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+17/08/30 15:37:47 WARN streaming.StreamingContext: StreamingContext has already been stopped
+17/08/30 15:37:47 INFO ui.SparkUI: Stopped Spark web UI at http://192.168.1.246:4040
+17/08/30 15:37:47 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/08/30 15:37:47 INFO memory.MemoryStore: MemoryStore cleared
+17/08/30 15:37:47 INFO storage.BlockManager: BlockManager stopped
+17/08/30 15:37:47 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+17/08/30 15:37:47 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/08/30 15:37:47 INFO spark.SparkContext: Successfully stopped SparkContext
+17/08/30 15:37:47 INFO util.ShutdownHookManager: Shutdown hook called
+17/08/30 15:37:47 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-6b387361-67db-486f-a64e-16c1f50b5f8b
+17/08/30 15:37:47 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-6b387361-67db-486f-a64e-16c1f50b5f8b/pyspark-600baa16-37a1-4161-8523-0a545b676360
