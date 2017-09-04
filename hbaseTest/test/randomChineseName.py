@@ -8,7 +8,7 @@ import string
 
 
 def random_name(size=1, chars=string.ascii_letters + string.digits):
-    return ''.join(random.choice(chars) for _ in range(size))
+    return random.choice(chars)
 
 
 def first_name(size=2, ln=None, fn=None):
@@ -95,3 +95,4 @@ if __name__ == "__main__":
                    '乾', '坤']
 
     print(full_name(last_names, first_names))
+    print random_name(2,first_names)
