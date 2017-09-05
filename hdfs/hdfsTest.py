@@ -7,7 +7,7 @@ from hdfs import Client
 # HDFSNN = "http://jp-bigdata-03:50070"
 # client = Client(HDFSNN,root="/",timeout=100,session=False)
 from hdfs import InsecureClient
-client = InsecureClient('http://jp-bigdata-03:50070', user='hdfs')
+client = InsecureClient('http://jp-bigdata-03:50070', user='xiongz')
 
 def ls(dir):
 	return client.list(dir)
@@ -39,30 +39,34 @@ def download(dirHadoop,dirLocal):
 
 def read(dir):
 	with client.read(dir) as file:
-		print file.read()
+		a = file.read().split("/n")
+		for i in a:
+			print i
 
 
 # def write(self, hdfs_path, data=None, overwrite=False, permission=None,
 #     blocksize=None, replication=None, buffersize=None, append=False,
-#     encoding=None):
-    """Create a file on HDFS.
-    :param hdfs_path: Path where to create file. The necessary directories will
-      be created appropriately.
-    :param data: Contents of file to write. Can be a string, a generator or a
-      file object. The last two options will allow streaming upload (i.e.
-      without having to load the entire contents into memory). If `None`, this
-      method will return a file-like object and should be called using a `with`
-      block (see below for examples).
-    :param overwrite: Overwrite any existing file or directory.
-    :param permission: Octal permission to set on the newly created file. Leading zeros may be omitted.
-    :param blocksize: Block size of the file.
-    :param replication: Number of replications of the file.
-    :param buffersize: Size of upload buffer.
-    :param append: Append to a file rather than create a new one.
-    :param encoding: Encoding used to serialize data written.
-    """
+#     encoding=None)
+"""Create a file on HDFS.
+:param hdfs_path: Path where to create file. The necessary directories will
+  be created appropriately.
+:param data: Contents of file to write. Can be a string, a generator or a
+  file object. The last two options will allow streaming upload (i.e.
+  without having to load the entire contents into memory). If `None`, this
+  method will return a file-like object and should be called using a `with`
+  block (see below for examples).
+:param overwrite: Overwrite any existing file or directory.
+:param permission: Octal permission to set on the newly created file. Leading zeros may be omitted.
+:param blocksize: Block size of the file.
+:param replication: Number of replications of the file.
+:param buffersize: Size of upload buffer.
+:param append: Append to a file rather than create a new one.
+:param encoding: Encoding used to serialize data written.
+"""
 def write():
-	with client.write("/user/xiongz/ltest1.py",encoding='utf-8',append=True) as writer:
+	with client.write(hdfs_path="/user/xiongz/ltest1.py",encoding='utf-8',append=True) as writer:
 		for i in range(12,19):
 			writer.write(str(i)+"\n")
 
+
+read("/user/xiongz/ltest.py")

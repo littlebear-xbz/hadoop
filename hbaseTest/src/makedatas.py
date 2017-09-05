@@ -6,6 +6,12 @@ test git
 import random
 import os
 import datetime
+from hdfs import InsecureClient
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+hdfs_client = InsecureClient("http://jp-bigdata-03:50070","xiongz")
 
 """
 random get a EnglishName
@@ -481,12 +487,34 @@ def safe_file():
             rowkey =  makr_rowkey(phoneNo,address_code)
             line = name + "|" + sex + "|" + phoneNo + "|" + birthDay + "|" + address + "|" + answer + "|" + rowkey + "\n"
             file.write(line)
+            if i % 1000 == 0 :
+                print i
+            else:
+                continue
+
+def safe_hbase():
+    with hdfs_client.write(hdfs_path="/user/xiongz/data.txt", encoding='utf-8', append=True) as writer:
+        for i in range(1,1000000):
+            name = random_name()
+            sex = randow_sex()
+            phoneNo = random_phone()
+            birthDay = random_birthday()
+            address_code = random_address()
+            address = address_dic[address_code]
+            answer = random_answer()
+            rowkey =  makr_rowkey(phoneNo,address_code)
+            line = name + "|" + sex + "|" + phoneNo + "|" + birthDay + "|" + address + "|" + answer + "|" + rowkey + "\n"
+            writer.write(line)
+            if i % 1000 == 0 :
+                print i
+            else:
+                continue
 
 if __name__ == "__main__":
     start = datetime.datetime.now()
-    safe_file()
+    safe_hbase()
     end = datetime.datetime.now()
-    print (end - start).seconds
+    print str((end - start).seconds) + "s"
 
 
 
