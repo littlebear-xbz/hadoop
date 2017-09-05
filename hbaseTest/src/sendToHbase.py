@@ -120,7 +120,7 @@ def put_datas_from_hdfs():
 '''
 一次性全部提交
 '''
-def put_batch_from_local(table_name='l_test_table',batch_size=100):
+def put_batch_from_local(table_name='l_test_table',batch_size=500):
     transport.open()
     mutations_batch = []
     with open('./data.txt') as file:
@@ -147,12 +147,13 @@ def put_batch_from_local(table_name='l_test_table',batch_size=100):
                          ]
             mutations_batch.append(BatchMutation(row=rowkey, mutations=mutations))
             if batch_size >= len_file - i :
-                print "start mutateRows ----- i: " + str(i)
+                print "start last mutateRows ----- i: " + str(i)
                 client.mutateRows(table_name, mutations_batch)
                 mutations_batch = []
-            elif len(mutations_batch) % batch_size == 0 and batch_size >= len_file - i :
-                print "start mutateRows ----- i: " + str(i)
+            elif len(mutations_batch) % batch_size == 0 and batch_size <= len_file - i :
+                print "start process mutateRows ----- i: " + str(i)
                 client.mutateRows(table_name, mutations_batch)
+                mutations_batch = []
             else:
                 continue
     transport.close()
