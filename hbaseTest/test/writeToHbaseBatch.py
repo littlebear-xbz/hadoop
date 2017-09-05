@@ -99,7 +99,6 @@ class CreateTableAndImportData(object):
         mutations_batch = []
         # batch site
         batch_size = 100
-
         for line in deal_file_handle:
             record = line.split(" ")
 

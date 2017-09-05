@@ -54,6 +54,7 @@ def get_table_names():
 
 """
 从本地获取数据上次到Hbase，奇怪每次只能上传7w条数据
+1条1条传数据
 """
 def put_datas():
     transport.open()
@@ -85,6 +86,7 @@ def put_datas():
 
 '''
 超级慢的运行
+1条1条传数据
 '''
 def put_datas_from_hdfs():
     transport.open()
@@ -115,5 +117,48 @@ def put_datas_from_hdfs():
                 continue
     transport.close()
 
+'''
+一次性全部提交
+'''
+def put_batch_from_local(table_name='l_test_table',batch_size=100):
+    transport.open()
+    mutations_batch = []
+    with open('./data.txt') as file:
+        lines = file.readlines()
+        len_file = len(lines)
+        print 'len_file : ' + str(len_file)
+        i= 0
+        for line in lines:
+            i = i + 1
+            list = line.split('|')
+            name = list[0]
+            sex = list[1]
+            phoneNo = list[2]
+            birthDay = list[3]
+            address = list[4]
+            answer = list[5]
+            rowkey = list[6].strip()
+            mutations = [Hbase.Mutation(column="person:name", value=name),
+                         Hbase.Mutation(column="person:sex", value=sex),
+                         Hbase.Mutation(column="person:phoneNo", value=phoneNo),
+                         Hbase.Mutation(column="person:birthDay", value=birthDay),
+                         Hbase.Mutation(column="person:address", value=address),
+                         Hbase.Mutation(column="content:answer", value=answer),
+                         ]
+            mutations_batch.append(BatchMutation(row=rowkey, mutations=mutations))
+            if batch_size >= len_file - i :
+                print "start mutateRows ----- i: " + str(i)
+                client.mutateRows(table_name, mutations_batch)
+                mutations_batch = []
+            elif len(mutations_batch) % batch_size == 0 and batch_size >= len_file - i :
+                print "start mutateRows ----- i: " + str(i)
+                client.mutateRows(table_name, mutations_batch)
+            else:
+                continue
+    transport.close()
+
 if __name__ == "__main__" :
-    creat_table(table_name="hdfs_hbase")
+    start = datetime.datetime.now()
+    put_batch_from_local()
+    end = datetime.datetime.now()
+    print "time: " + str((end-start).seconds)
