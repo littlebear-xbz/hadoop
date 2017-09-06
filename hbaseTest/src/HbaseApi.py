@@ -78,6 +78,71 @@ def getARow(table="hdfs_hbase",row='1884915421804564',colnum='person:address'):
     transport.close()
     return result[0].value
 
+'''
+# scan all
+print 'starting scanner...'
+scanner = client.scannerOpen(t, '', ['entry:'])
+
+r = client.scannerGet(scanner)
+while r:
+    #printRow(r[0])
+    r = client.scannerGet(scanner)
+print 'scanner finished '
+
+# scan for range
+columnNames = []
+for (col, desc) in client.getColumnDescriptors(t).items():
+    print 'column with name:', desc.name
+    print desc
+    columnNames.append(desc.name + ':')
+
+print 'stating scanner...'
+scanner = client.scannerOpenWithStop(t, '00020', '00040', columnNames)
+
+r = client.scannerGet(scanner)
+while r:
+    # printRow(r[0])
+    r = client.scannerGet(scanner)
+
+client.scannerClose(scanner)
+print 'scanner finished'
+'''
+def getAllRow(table_name='l_test_table'):
+    print 'starting scanner...'
+    scanner = client.scannerOpen(table_name,'', ['person:name'])
+    r = client.scannerGet(scanner)
+    count = 0
+    while r:
+        # print(r)
+        r = client.scannerGet(scanner)
+        count = count + 1
+        if count % 10000 == 0:
+            print count
+    # print len(r)
+    print 'scanner finished '
+
+def getRangeRow(table_name='l_test_table'):
+    columnNames = []
+    for (col, desc) in client.getColumnDescriptors(table_name).items():
+        print 'column with name:', desc.name
+        print desc
+        columnNames.append(desc.name + ':')
+        print columnNames
+
+    print 'stating scanner...'
+    scanner = client.scannerOpenWithStop(table_name,'1310000000000000','1320000000000000', ['person:name'])
+
+    r = client.scannerGet(scanner)
+    while r:
+        print(r[0])
+        r = client.scannerGet(scanner)
+
+    client.scannerClose(scanner)
+    print 'scanner finished'
 
 if __name__ == "__main__" :
-    print getARow(colnum="person:name")
+    table_name = "l_test_table"
+    transport.open()
+    getRangeRow()
+    # print client.getRow(table_name,'1346740630401418')
+    transport.close()
