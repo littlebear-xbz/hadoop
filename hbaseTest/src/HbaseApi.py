@@ -78,5 +78,6 @@ def getARow(table="hdfs_hbase",row='1884915421804564',colnum='person:address'):
     transport.close()
     return result[0].value
 
+
 if __name__ == "__main__" :
     print getARow(colnum="person:name")
