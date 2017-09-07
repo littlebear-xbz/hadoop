@@ -9,9 +9,8 @@ from kafka import KafkaConsumer
 reload(sys)
 sys.setdefaultencoding('utf-8')
 # To consume latest messages and auto-commit offsets
-consumer = KafkaConsumer('ltest',
-                            bootstrap_servers=['jp-hadoop-05:9092', 'jp-hadoop-06:9092',
-                                                'jp-hadoop-07:9092', 'jp-hadoop-08:9092', 'jp-hadoop-09:9092'])
+consumer = KafkaConsumer('ltest_3',group_id='groupltest3',
+                            bootstrap_servers=['jp-bigdata-05:9092','jp-bigdata-09:9092'])
 for message in consumer:
 # message value and key are raw bytes -- decode if necessary!
 #  e.g., for unicode: `message.value.decode('utf-8')`
