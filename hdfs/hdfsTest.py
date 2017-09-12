@@ -7,7 +7,8 @@ from hdfs import Client
 # HDFSNN = "http://jp-bigdata-03:50070"
 # client = Client(HDFSNN,root="/",timeout=100,session=False)
 from hdfs import InsecureClient
-client = InsecureClient('http://jp-bigdata-03:50070', user='xiongz')
+# client = InsecureClient('http://jp-bigdata-03:50070', user='xiongz')
+client = InsecureClient('http://azure-mysql-07:50070', user='xiongz')
 
 def ls(dir):
 	return client.list(dir)
@@ -69,4 +70,7 @@ def write():
 			writer.write(str(i)+"\n")
 
 
-read("/user/xiongz/ltest.py")
+def create_file(dir="/user/xiongz/test.log"):
+	client.write(hdfs_path=dir,data="",encoding='utf-8')
+
+print client.write("/user/xiongz/data1.txt",overwrite=True,data="test",encoding='utf-8')
