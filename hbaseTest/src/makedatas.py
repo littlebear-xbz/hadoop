@@ -4,15 +4,15 @@ test git
 @author: xiongz
 """
 import random
-import os
+import time
 import datetime
 from hdfs import InsecureClient
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-hdfs_client = InsecureClient("http://jp-bigdata-03:50070","xiongz")
-
+# hdfs_client = InsecureClient("http://jp-bigdata-03:50070","xiongz")
+hdfs_client = InsecureClient("http://azure-mysql-07:50070","xiongz")
 """
 random get a EnglishName
 """
@@ -476,7 +476,7 @@ def makr_rowkey(phoneNo,address_code):
 
 def safe_file():
     with open("./data.txt","w+") as file:
-        for i in range(1,1000000):
+        for i in range(1,1000):
             name = random_name()
             sex = randow_sex()
             phoneNo = random_phone()
@@ -492,9 +492,9 @@ def safe_file():
             else:
                 continue
 
-def safe_hbase():
-    with hdfs_client.write(hdfs_path="/user/xiongz/data.txt", encoding='utf-8', append=True) as writer:
-        for i in range(1,1000000):
+def safe_hdfs():
+    with hdfs_client.write(hdfs_path="/user/xiongz/data1.txt", encoding='utf-8', append=True) as writer:
+        for i in range(1,1000):
             name = random_name()
             sex = randow_sex()
             phoneNo = random_phone()
@@ -512,7 +512,7 @@ def safe_hbase():
 
 if __name__ == "__main__":
     start = datetime.datetime.now()
-    safe_hbase()
+    safe_hdfs()
     end = datetime.datetime.now()
     print str((end - start).seconds) + "s"
 

@@ -11,10 +11,10 @@ from kafka.consumer import SimpleConsumer
 reload(sys)
 sys.setdefaultencoding('utf-8')
 # To consume latest messages and auto-commit offsets
-# server_list = ['jp-bigdata-03:9092','jp-bigdata-04:9092','jp-bigdata-05:9092','jp-bigdata-06:9092','jp-bigdata-07:9092','jp-bigdata-08:9092', 'jp-bigdata-09:9092']
-server_list = ['azure-mysql-01:9092']
+server_list = ['jp-bigdata-03:9092','jp-bigdata-04:9092','jp-bigdata-05:9092','jp-bigdata-06:9092','jp-bigdata-07:9092','jp-bigdata-08:9092', 'jp-bigdata-09:9092']
+# server_list = ['azure-mysql-01:9092']
 
-consumer = KafkaConsumer('ltest', group_id='groupltest',
+consumer = KafkaConsumer('msreply', group_id='groupltest',
                          bootstrap_servers=server_list)
 def listenTopic():
     count = 0
