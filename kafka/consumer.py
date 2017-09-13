@@ -7,9 +7,17 @@ import sys
 from kafka import KafkaConsumer
 from kafka.client import KafkaClient
 from kafka.consumer import SimpleConsumer
+import logging
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
+
+logging.basicConfig(level=logging.INFO,
+					format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+					datefmt='%a, %d %b %Y %H:%M:%S',
+					filename='reply.log',
+					filemode='w'
+					)
 # To consume latest messages and auto-commit offsets
 server_list = ['jp-bigdata-03:9092','jp-bigdata-04:9092','jp-bigdata-05:9092','jp-bigdata-06:9092','jp-bigdata-07:9092','jp-bigdata-08:9092', 'jp-bigdata-09:9092']
 # server_list = ['azure-mysql-01:9092']
@@ -22,7 +30,7 @@ def listenTopic():
     # message value and key are raw bytes -- decode if necessary!
     #  e.g., for unicode: `message.value.decode('utf-8')`
         count = count + 1
-        print("count:%d topic:%s partition:%d offset:%d: key=%s value=%s"%(count,message.topic, message.partition,message.offset,
+        logging.info("count:%d topic:%s partition:%d offset:%d: key=%s value=%s"%(count,message.topic, message.partition,message.offset,
                                            message.key,
                                            message.value))
 
