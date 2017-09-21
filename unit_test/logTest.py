@@ -1,8 +1,9 @@
+import logging
+logging.basicConfig(level=logging.INFO,
+                    format='[%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s:::] %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S',
+                    # filename='reply.log',
+                    # filemode='w'
+                    )
 
-def a():
-    s = 1
-    b = 2
-    return s,b
-
-s,b = a()
-print s,b
+logging.info("a")

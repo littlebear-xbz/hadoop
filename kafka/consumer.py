@@ -14,7 +14,7 @@ sys.setdefaultencoding('utf-8')
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                    datefmt='%a, %d %b %Y %H:%M:%S',
+                    datefmt='%Y-%m-%d %H:%M:%S',
                     filename='reply.log',
                     filemode='w'
                     )
