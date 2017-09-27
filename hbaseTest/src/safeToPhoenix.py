@@ -41,7 +41,7 @@ for message in consumer:
             recived_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
             recived_status = messagelist[1]
             print str(messagelist) + "fail"
-            rowkey =  rowkey = hashlib.md5(recived_url_send).hexdigest() + datetime.datetime.now().strftime('%Y%m%d%H%M%S')\
+            rowkey = hashlib.md5(recived_url_send).hexdigest() + datetime.datetime.now().strftime('%Y%m%d%H%M%S')\
                                             +recived_url_send
             sql_l = """UPSERT INTO test.LTEST(RowSets,send_url,recived_time,status)
         VALUES('%(rowkey)s',
@@ -60,7 +60,7 @@ for message in consumer:
     elif len(messagelist) < 2 or len(messagelist) > 12:
         logging.error("message is error")
         logging.error(recived_message)
-    elif len(messagelist) > 2 and len(messagelist):
+    elif len(messagelist) > 2 and len(messagelist) <=12 :
         recived_url_send = messagelist[0]
         recived_status = messagelist[1]
         recived_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
