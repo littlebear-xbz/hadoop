@@ -23,7 +23,7 @@ sys.setdefaultencoding('utf8')
 
 hdfs_client = InsecureClient("http://jp-bigdata-03:50070","xiongz")
 
-Hbase_url = "jp-bigdata-03"
+Hbase_url = "jp-bigdata-02"
 Hbase_port = 9090
 
 transport = TTransport.TBufferedTransport(TSocket.TSocket(Hbase_url, Hbase_port))
@@ -142,7 +142,4 @@ def getRangeRow(table_name='l_test_table'):
 
 if __name__ == "__main__" :
     table_name = "l_test_table"
-    transport.open()
-    getRangeRow()
-    # print client.getRow(table_name,'1346740630401418')
-    transport.close()
+    print get_table_names()

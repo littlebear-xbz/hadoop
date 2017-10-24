@@ -3,27 +3,32 @@ from pyspark import SparkContext,SparkConf
 from pyspark.streaming import StreamingContext
 from operator import add
 
+import test1
+test1.testA()
+test1.set_spark_env()
+
 conf = SparkConf()
 conf = conf.setAppName("test")
 sc = SparkContext(conf=conf)
 
+
 # distData = sc.parallelize(data,numSlices=10)
 
 # read file as rdd
-rdd = sc.textFile("file:///home/l/project/hadoop/sparkbyME/test/data.txt")
-newrdd = rdd.map(lambda x:x.split("|")[0])
-print len(newrdd.collect())
-newrdd = newrdd.map(lambda x:(x,1)).reduceByKey(lambda x,y:x+y)
-print len(newrdd.collect())
+# rdd = sc.textFile(u"file://D:/l/python/code_python/hadoop/hbaseTest/src/data.txt")
+# newrdd = rdd.map(lambda x:x.split("|")[0])
+# print len(newrdd.collect())
+# newrdd = newrdd.map(lambda x:(x,1)).reduceByKey(lambda x,y:x+y)
+# print len(newrdd.collect())
 # num = 1
 # nums = 0
 # for name,count in newrdd.collect():
 #     if count == 2:
 #         nums = nums + 1
 # print nums
-values = [v for v in dict(newrdd.collect()).values()]
-distinctList = list(set(values))
-print distinctList
+# values = [v for v in dict(newrdd.collect()).values()]
+# distinctList = list(set(values))
+# print distinctList
 
 
 data = [1,2,3,4,5]
@@ -70,7 +75,7 @@ x = sc.parallelize([1,2,3,4,5,6],3)
 def f(i):
     yield sum(i)
 y = x.mapPartitions(f)
-# print y.collect()
+print y.collect()
 
 x = sc.parallelize(range(10))
 ylist = [x.sample(withReplacement=False,fraction=0.9) for i in range(5)]

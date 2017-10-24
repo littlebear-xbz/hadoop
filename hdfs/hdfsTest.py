@@ -8,11 +8,10 @@ from hdfs import Client
 # client = Client(HDFSNN,root="/",timeout=100,session=False)
 from hdfs import InsecureClient
 # client = InsecureClient('http://jp-bigdata-03:50070', user='xiongz')
-client = InsecureClient('http://azure-mysql-07:50070', user='xiongz')
+client = InsecureClient('http://jp-bigdata-03:50070', user='xiongz')
 
 def ls(dir):
 	return client.list(dir)
-
 
 def mkdir(dir):
 	client.makedirs(dir)
@@ -22,7 +21,6 @@ def rm(dir):
 
 def rm_r(dir):
 	client.delete(dir,recursive=True)
-
 
 # 其他参数：upload(hdfs_path, local_path, overwrite=False, n_threads=1, temp_dir=None, 
 #                                  chunk_size=65536,progress=None, cleanup=True, **kwargs)
@@ -43,7 +41,6 @@ def read(dir):
 		a = file.read().split("/n")
 		for i in a:
 			print i
-
 
 # def write(self, hdfs_path, data=None, overwrite=False, permission=None,
 #     blocksize=None, replication=None, buffersize=None, append=False,
@@ -73,4 +70,4 @@ def write():
 def create_file(dir="/user/xiongz/test.log"):
 	client.write(hdfs_path=dir,data="",encoding='utf-8')
 
-print client.write("/user/xiongz/data1.txt",overwrite=True,data="test",encoding='utf-8')
+print ls('/')

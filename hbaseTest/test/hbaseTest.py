@@ -10,7 +10,7 @@ from thrift.protocol import TBinaryProtocol
 from hbase import Hbase
  
 #server端地址和端口,web是HMaster也就是thriftServer主机名,9090是thriftServer默认端口
-transport = TSocket.TSocket('jp-bigdata-03', 9090)
+transport = TSocket.TSocket('jp-bigdata-02', 9090)
 #可以设置超时
 transport.setTimeout(5000)
 #设置传输方式（TFramedTransport或TBufferedTransport）

@@ -6,7 +6,6 @@ test git
 
 from hdfs import InsecureClient
 import pymysql
-import time
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
