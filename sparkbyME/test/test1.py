@@ -24,6 +24,7 @@ import os
 from pyspark import SparkContext
 from pyspark import SparkConf
 
+
 def testA():
     print "a"
 

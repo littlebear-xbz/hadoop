@@ -40,7 +40,7 @@ Run with:
 def basic_df_example(spark):
     # $example on:create_df$
     # spark is an existing SparkSession
-    df = spark.read.json("examples/src/main/resources/people.json")
+    df = spark.read.json("file:///opt/cloudera/parcels/SPARK2/lib/spark2/examples/src/main/resources/people.json")
     # Displays the content of the DataFrame to stdout
     df.show()
     # +----+-------+
@@ -145,7 +145,7 @@ def schema_inference_example(spark):
     sc = spark.sparkContext
 
     # Load a text file and convert each line to a Row.
-    lines = sc.textFile("examples/src/main/resources/people.txt")
+    lines = sc.textFile("file:///opt/cloudera/parcels/SPARK2/lib/spark2/examples/src/main/resources/people.txt")
     parts = lines.map(lambda l: l.split(","))
     people = parts.map(lambda p: Row(name=p[0], age=int(p[1])))
 
@@ -170,7 +170,7 @@ def programmatic_schema_example(spark):
     sc = spark.sparkContext
 
     # Load a text file and convert each line to a Row.
-    lines = sc.textFile("examples/src/main/resources/people.txt")
+    lines = sc.textFile("file:///opt/cloudera/parcels/SPARK2/lib/spark2/examples/src/main/resources/people.txt")
     parts = lines.map(lambda l: l.split(","))
     # Each line is converted to a tuple.
     people = parts.map(lambda p: (p[0], p[1].strip()))
@@ -187,8 +187,8 @@ def programmatic_schema_example(spark):
     # Creates a temporary view using the DataFrame
     schemaPeople.createOrReplaceTempView("people")
 
-    # Creates a temporary view using the DataFrame
-    schemaPeople.createOrReplaceTempView("people")
+    # # Creates a temporary view using the DataFrame
+    # schemaPeople.createOrReplaceTempView("people")
 
     # SQL can be run over DataFrames that have been registered as a table.
     results = spark.sql("SELECT name FROM people")
@@ -212,8 +212,8 @@ if __name__ == "__main__":
         .getOrCreate()
     # $example off:init_session$
 
-    basic_df_example(spark)
-    schema_inference_example(spark)
+    # basic_df_example(spark)
+    # schema_inference_example(spark)
     programmatic_schema_example(spark)
 
     spark.stop()

@@ -14,14 +14,7 @@ def writeToHdfs():
     while True:
         with client.write(hdfs_path="/user/xiongz/test.log", encoding='utf-8', append=True) as writer:
             writer.write("I am A\n")
-        print "write 123"
+        print "write I am A"
         time.sleep(2)
 
-def writeToHdfs2():
-    while True:
-        with client.write(hdfs_path="/user/xiongz/test.log", encoding='utf-8', append=True) as writer:
-            writer.write("I Bob\n")
-        print "write I Bob"
-        time.sleep(4)
-
-writeToHdfs2()
+writeToHdfs()
